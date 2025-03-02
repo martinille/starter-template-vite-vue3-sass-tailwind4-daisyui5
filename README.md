@@ -13,7 +13,12 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ### Demo
 - 🌐 [https://tpl-vue3-tailwind4-daisyui5.brown.sk/](https://tpl-vue3-tailwind4-daisyui5.brown.sk/)
 
-### Template initialization
+### Template initialization by forking (recommended) 🍴
+⏩ Use github's template feature to create a new repository based on this template:
+
+➡ [Create a repository from this template](https://github.com/new?template_name=starter-template-vite-vue3-sass-tailwind4-daisyui5&template_owner=martinille) ⬅
+
+### Template initialization by cloning
 ⏩ Clone the repository: 
 ```bash
 git clone https://github.com/martinille/starter-template-vite-vue3-sass-tailwind4-daisyui5.git <project-name>
