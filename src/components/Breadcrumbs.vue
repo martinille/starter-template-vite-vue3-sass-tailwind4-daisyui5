@@ -13,7 +13,7 @@ const breadcrumbs = computed(() => {
 	<div class="border-b border-b-base-200/50 pt-3 pb-2">
 		<div class="container-center text-left ">
 			<div class="breadcrumbs inline-flex gap-4">
-				<span class="text-neutral-600">You are here:</span>
+				<span class="text-base-content/70">You are here:</span>
 				<ul>
 					<li>
 						<router-link to="/">Home</router-link>
