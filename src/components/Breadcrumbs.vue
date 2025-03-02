@@ -10,7 +10,7 @@ const breadcrumbs = computed(() => {
 </script>
 
 <template>
-	<div class="border-b border-b-base-300 pt-3 pb-2">
+	<div class="border-b border-b-base-200/50 pt-3 pb-2">
 		<div class="container-center text-left ">
 			<div class="breadcrumbs inline-flex gap-4">
 				<span class="text-neutral-600">You are here:</span>

@@ -25,7 +25,7 @@ import SubscriptionPlanCard from "@/components/ComponentsPreview/SubscriptionPla
 		</div>
 	</div>
 	<div class="text-center mt-10">
-		<router-link :to="{ path: '/preview' }" class="btn btn-lg btn-accent mt-10">
+		<router-link :to="{ path: '/preview' }" class="btn btn-lg btn-primary mt-10">
 			Check more components <span class="icon">👉</span>
 		</router-link>
 	</div>

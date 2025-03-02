@@ -49,7 +49,7 @@
 					Priority Support
 				</div>
 			</div>
-			<button class="btn btn-accent">Buy Now</button>
+			<button class="btn btn-primary">Buy Now</button>
 		</div>
 	</div>
 </template>
