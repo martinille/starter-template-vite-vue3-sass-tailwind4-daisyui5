@@ -1,5 +1,5 @@
 # Template: Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5
-[Starter template: Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5](https://tpl-vue3-tailwind4-daisyui5.brown.sk/template-image.png)
+![Starter template: Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5](https://tpl-vue3-tailwind4-daisyui5.brown.sk/template-image.png)
 
 This template should help get you started developing with Vue 3 in Vite. The template is based on the [Vite + Vue 3 template](https://vite.new/vue), but with some additional features:
 
