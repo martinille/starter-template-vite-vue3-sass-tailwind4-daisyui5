@@ -5,6 +5,8 @@ import ComponentsPreview from "@/components/Home/ComponentsPreview.vue";
 import Guide from "@/components/Home/Guide.vue";
 
 const title = document.title;
+const currentHostname = window.location.hostname;
+const demoHostname = "tpl-vue3-tailwind4-daisyui5.brown.sk";
 </script>
 
 <template>
@@ -16,6 +18,14 @@ const title = document.title;
 			<p>Vite, Vue 3, Sass, Tailwind CSS 4, and DaisyUI 5 included. <b>Vue router is also included and configured</b>, you could try navigating to another page or to a page that does not exist.</p>
 		</div>
 	</div>
+
+	<!-- Banner -->
+	<div class="mb-10 text-center" v-if="currentHostname !== demoHostname">
+		<div class="badge badge-lg badge-soft badge-dash badge-accent h-auto p-1">
+			🌐 Check out live demo: <a :href="`https://${ demoHostname }`" target="_blank" class="link">https://{{ demoHostname }}</a>
+		</div>
+	</div>
+
 
 	<!-- Packages -->
 	<div class="bg-base-300 text-base-content text-center mb-10">
