@@ -9,14 +9,18 @@
 	<script>
 		// Set theme based on system or saved theme
 		(function() {
-			const savedTheme = localStorage.getItem('theme'); // 'system', 'light' nebo 'dark'
-			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; // true or false
-			const theme = savedTheme || (prefersDark ? 'dark' : 'light'); // 'light' or 'dark'
-			document.documentElement.setAttribute('data-theme', theme); // save theme to html tag
+			try {
+				const savedTheme = localStorage.getItem('theme'); // 'system', 'light' nebo 'dark'
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; // true or false
+				const theme = savedTheme || (prefersDark ? 'dark' : 'light'); // 'light' or 'dark'
+				document.documentElement.setAttribute('data-theme', theme); // save theme to html tag
+			} catch (e) {
+				console.error('Error setting theme:', e);
+			}
 		})();
 	</script>
-  <script type="module" crossorigin src="/assets/index-qczAyx--.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BjSPmB6v.css">
+  <script type="module" crossorigin src="/assets/index-BljdUQs6.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DdCzOVoO.css">
 </head>
 <body class="bg-base-200">
 <div id="app"></div>
