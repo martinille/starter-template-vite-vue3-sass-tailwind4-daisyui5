@@ -9,10 +9,14 @@
 	<script>
 		// Set theme based on system or saved theme
 		(function() {
-			const savedTheme = localStorage.getItem('theme'); // 'system', 'light' nebo 'dark'
-			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; // true or false
-			const theme = savedTheme || (prefersDark ? 'dark' : 'light'); // 'light' or 'dark'
-			document.documentElement.setAttribute('data-theme', theme); // save theme to html tag
+			try {
+				const savedTheme = localStorage.getItem('theme'); // 'system', 'light' nebo 'dark'
+				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; // true or false
+				const theme = savedTheme || (prefersDark ? 'dark' : 'light'); // 'light' or 'dark'
+				document.documentElement.setAttribute('data-theme', theme); // save theme to html tag
+			} catch (e) {
+				console.error('Error setting theme:', e);
+			}
 		})();
 	</script>
 </head>
