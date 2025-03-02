@@ -1,0 +1,8 @@
+@forward "vendor/tailwind.css";
+@forward "vendor/daisyui.css";
+
+.container-center {
+	@apply container mx-auto px-4;
+}
+
+

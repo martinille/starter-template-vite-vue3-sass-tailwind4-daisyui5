@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Starter template: Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5</title>
+
+	<script>
+		// Set theme based on system or saved theme
+		(function() {
+			const savedTheme = localStorage.getItem('theme'); // 'system', 'light' nebo 'dark'
+			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; // true or false
+			const theme = savedTheme || (prefersDark ? 'dark' : 'light'); // 'light' or 'dark'
+			document.documentElement.setAttribute('data-theme', theme); // save theme to html tag
+		})();
+	</script>
+</head>
+<body class="bg-base-200">
+<div id="app"></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

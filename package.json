@@ -1,0 +1,28 @@
+{
+  "name": "starter-template-vite-vue3-sass-tailwind4-daisyui5",
+  "version": "1.0.0",
+  "description": "Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5 template",
+  "author": "Martin Ille <ille.martin@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.6",
+    "@tailwindcss/vite": "^4.0.6",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^5.0.0",
+    "postcss": "^8.5.2",
+    "sass": "^1.85.0",
+    "tailwindcss": "^4.0.9",
+    "vite": "^6.1.0"
+  }
+}
