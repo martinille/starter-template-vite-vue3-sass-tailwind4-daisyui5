@@ -12,9 +12,9 @@ const demoHostname = "tpl-vue3-tailwind4-daisyui5.brown.sk";
 <template>
 	<!-- Title -->
 	<div class="container-center text-center">
-		<h1>🚀 {{ title }}</h1>
+		<h1 class="mb-8">🚀 {{ title }}</h1>
 		<div class="text-base-content/70 mb-10">
-			<p>Welcome! This template is prepared for you to start your project quickly. You can use it for your frontend projects.</p>
+			<p>Welcome! This starter template is designed to provide a pre-configured setup. It allows you to start by editing Vue components using Tailwind CSS and DaisyUI for styling.</p>
 			<p>Vite, Vue 3, Sass, Tailwind CSS 4, and DaisyUI 5 included. <b>Vue router is also included and configured</b>, you could try navigating to another page or to a page that does not exist.</p>
 		</div>
 	</div>
