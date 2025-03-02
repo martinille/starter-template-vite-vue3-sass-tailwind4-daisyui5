@@ -85,11 +85,3 @@
 	--depth: 1;
 	--noise: 0;
 }
-
-
-/**
- * This is a custom variant for the dark theme.
- * Required to apply the dark theme to the custom components.
- * You can create custom variants like: @custom-variant cupcake (&:where([data-theme=cupcake], [data-theme=cupcake] *));
- */
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));

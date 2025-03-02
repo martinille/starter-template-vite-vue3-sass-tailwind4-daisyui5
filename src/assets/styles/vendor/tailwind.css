@@ -74,3 +74,18 @@
 	/* @tailwind utilities; */
 	/* ... */
 }
+
+/**
+ * This is a custom variant for the DaisyUI themes.
+ * It's necessary when you want to use the CSS prefixes like `dark:`, `light:`, 'cupcake:', etc.
+ * You can add own custom variant like: @custom-variant theme-name (&:where([data-theme=theme-name], [data-theme=theme-name] *));
+ * Docs: https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
+ */
+@custom-variant light (&:where([data-theme=light], [data-theme=light] *));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant cupcake (&:where([data-theme=cupcake], [data-theme=cupcake] *));
+@custom-variant retro (&:where([data-theme=retro], [data-theme=retro] *));
+@custom-variant valentine (&:where([data-theme=valentine], [data-theme=valentine] *));
+@custom-variant business (&:where([data-theme=business], [data-theme=business] *));
+@custom-variant coffee (&:where([data-theme=coffee], [data-theme=coffee] *));
+@custom-variant nord (&:where([data-theme=nord], [data-theme=nord] *));
