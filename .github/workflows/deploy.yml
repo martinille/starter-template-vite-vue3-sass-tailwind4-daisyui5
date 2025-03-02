@@ -24,3 +24,6 @@ jobs:
           branch: gh-pages
           folder: dist
           clean: true
+
+      - name: Copy template-image.png
+        run: cp public/template-image.png dist/template-image.png
