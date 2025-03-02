@@ -87,7 +87,7 @@ let projectName = ref("");
 				<div class="mockup-browser-toolbar">
 					<div class="input">http://localhost:5173</div>
 				</div>
-				<div class="grid place-content-center items-center border-t border-base-300 h-60 gap-4 p-8">
+				<div class="grid place-content-center items-center border-t border-base-300 h-60 gap-4 p-8 bg-white/10">
 					<div class="">🚀 Starter template: Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5</div>
 					<div class="skeleton h-4 w-32 mx-auto"></div>
 					<div class="skeleton h-4 w-40 mx-auto"></div>
