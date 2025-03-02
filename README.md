@@ -6,7 +6,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - ✅ [Vue 3](https://vuejs.org/) for the frontend
 - ✅ [Vue Router 4](https://router.vuejs.org/) for routing
 - ✅ [Sass](https://sass-lang.com/) for styling
-- ✅ [Tailwind CSS 4](https://tailwindcss.com/) for styling (no `tailwind.config.js` required)
+- ✅ [Tailwind CSS 4](https://tailwindcss.com/) for styling
 - ✅ [DaisyUI 5](https://daisyui.com/) for additional Tailwind CSS components
 - ✅ [PostCSS](https://postcss.org/) for transforming CSS with JS plugins
 
@@ -36,4 +36,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
   - 📄 `main.js` - Entry point
 
 ### TODO
-- [ ] 🕘 Update `daisyUI 5.0.0-beta.8` to `daisyUI 5.0.0` (after March 1st 2025)
+- [ ] 🕘 Minimal template (no additional features)
