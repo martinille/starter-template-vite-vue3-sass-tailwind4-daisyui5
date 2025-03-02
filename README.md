@@ -10,11 +10,29 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - ✅ [DaisyUI 5](https://daisyui.com/) for additional Tailwind CSS components
 - ✅ [PostCSS](https://postcss.org/) for transforming CSS with JS plugins
 
+### Demo
+- 🌐 [https://tpl-vue3-tailwind4-daisyui5.brown.sk/](https://tpl-vue3-tailwind4-daisyui5.brown.sk/)
+
 ### Template initialization
-- ⏩ Clone the repository: `git clone https://github.com/martinille/starter-template-vite-vue3-sass-tailwind4-daisyui5.git <project-name>`
-- ⏩ Change the directory: `cd <project-name>`
-- ⏩ Remove the `.git` directory: `rm -rf .git`
-- ⏩ Install the dependencies: `npm install`
+⏩ Clone the repository: 
+```bash
+git clone https://github.com/martinille/starter-template-vite-vue3-sass-tailwind4-daisyui5.git <project-name>
+```
+
+⏩ Change the directory:
+```bash
+cd <project-name>
+```
+
+⏩ Remove the `.git` directory: 
+```bash
+rm -rf .git
+```
+
+⏩ Install the dependencies: 
+```bash
+npm install
+```
 
 ### Development
 - ⏩ Run the Vite development server with HMR: `npm run dev`
