@@ -4,7 +4,6 @@ import ThemeControllerMini from "@/components/ThemeControllerMini.vue";
 import Breadcrumbs from "@/components/Breadcrumbs.vue";
 
 const router = useRouter();
-const routes = router.options.routes;
 const title = 'Template Preview';
 </script>
 
