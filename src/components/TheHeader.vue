@@ -27,16 +27,20 @@ const title = 'Template Preview';
 			</div>
 		</div>
 		<div class="flex-1 w-auto">
-			<router-link :to="{ name: 'Home' }" class="text-xl">{{ title }}</router-link>
+			<router-link :to="{ name: 'home' }" class="text-xl">{{ title }}</router-link>
 		</div>
 		<div class="inline-flex flex-none gap-x-2">
 			<router-link
-				v-for="route in routes"
-				:key="route.path"
-				:to="route.path"
-				:class="{ 'btn-active': route.path === router.currentRoute.value.path }"
+				:to="{ name: 'home' }"
 				class="btn btn-ghost"
-			>{{ route.name }}</router-link>
+				:class="{ 'btn-active': router.currentRoute.value.name === 'home' }"
+			>Home</router-link>
+
+			<router-link
+				:to="{ name: 'componentsPreview' }"
+				class="btn btn-ghost"
+				:class="{ 'btn-active': router.currentRoute.value.name === 'componentsPreview' }"
+			>Components Preview</router-link>
 
 			<ThemeControllerMini class="mx-2"/>
 

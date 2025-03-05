@@ -7,6 +7,10 @@ const route = useRoute();
 const breadcrumbs = computed(() => {
 	return route.matched.filter(record => record.name.toLowerCase() !== 'home') // Filter out the home route
 });
+
+const isHomeActive = computed(() => {
+	return route.name && route.name.toLowerCase() === 'home';
+});
 </script>
 
 <template>
@@ -16,10 +20,16 @@ const breadcrumbs = computed(() => {
 				<span class="text-base-content/70">You are here:</span>
 				<ul>
 					<li>
-						<router-link to="/">Home</router-link>
+						<router-link
+							:to="{ name: 'home' }"
+							:class="{ 'font-semibold': isHomeActive }"
+						>Home</router-link>
 					</li>
 					<li v-for="(breadcrumb, index) in breadcrumbs" :key="index">
-						<router-link :to="breadcrumb.path">{{ breadcrumb.name }}</router-link>
+						<router-link
+							:to="breadcrumb.path"
+							class="font-semibold"
+						>{{ breadcrumb.meta.title }}</router-link>
 					</li>
 				</ul>
 			</div>

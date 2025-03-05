@@ -1,15 +1,24 @@
-import HomeView from "@/views/HomeView.vue";
-import PreviewView from "@/views/PreviewView.vue";
+import HomeView from '@/views/HomeView.vue';
 
 export default [
 	{
 		path: '/',
-		name: 'Home',
+		name: 'home',
 		component: HomeView,
+		meta: { title: 'Home' },
 	},
 	{
 		path: '/preview',
-		name: 'Component Preview',
-		component: PreviewView
+		name: 'componentsPreview',
+		// Lazy-loaded route
+		component: () => import('@/views/PreviewView.vue'),
+		meta: { title: 'Components Preview' },
 	},
+	{
+		// 404 fallback
+		path: '/:pathMatch(.*)*',
+		name: 'notFound',
+		component: () => import('@/views/NotFoundView.vue'),
+		meta: { title: '404 Not Found' },
+	}
 ];

@@ -16,7 +16,7 @@ const githubRepo = "https://github.com/martinille/starter-template-vite-vue3-sas
 		<h1 class="mb-8">🚀 {{ title }}</h1>
 		<div class="text-base-content/70 mb-10">
 			<p>Welcome! This starter template is designed to provide a pre-configured setup. It allows you to start by editing Vue components using Tailwind CSS and DaisyUI for styling.</p>
-			<p>Vite, Vue 3, Sass, Tailwind CSS 4, and DaisyUI 5 included. <b>Vue router is also included and configured</b>, you could try navigating to another page or to a page that does not exist.</p>
+			<p>Vite, Vue 3, Sass, Tailwind CSS 4, and DaisyUI 5 included. <b>Vue Router is also included and configured</b>, you could try navigating to another page or to <router-link :to="{ path: '/non-existing/route' }" class="link">a page that does not exist</router-link>.</p>
 		</div>
 	</div>
 

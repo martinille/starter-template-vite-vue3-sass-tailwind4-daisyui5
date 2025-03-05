@@ -8,7 +8,7 @@ import TheHeader from "@/components/TheHeader.vue";
 	<TheHeader/>
 
 	<main class="py-8">
-		<RouterView />
+		<router-view />
 	</main>
 <!--		<HelloWorld msg="Vite + Vue"/>-->
 
