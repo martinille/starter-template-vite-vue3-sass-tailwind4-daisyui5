@@ -61,6 +61,14 @@ npm install
   - 📄 `App.vue` - Root component
   - 📄 `main.js` - Entry point
 
+### GitHub Pages
+
+The template includes a GitHub workflow for deployment to GitHub Pages. To enable GitHub Pages:
+
+1. Visit your repository's Settings
+2. Select the Pages section
+3. In the "Build and deployment" area, set the source to "GitHub Actions"
+
 ### TODO
 - [ ] 🕘 Add unit tests
 - [ ] 🕘 Minimal template (no additional features)
