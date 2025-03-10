@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig(({mode}) => ({
+        base: process.env.BASE_URL,
 	plugins: [vue(), tailwindcss()],
 	css: {
 		devSourcemap: mode === "development",
