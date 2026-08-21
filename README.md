@@ -19,6 +19,10 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ### Demo
 - 🌐 [https://tpl-vue3-tailwind4-daisyui5.brown.sk/](https://tpl-vue3-tailwind4-daisyui5.brown.sk/)
 
+### Upgrading from v1
+v2 switches the package manager to Yarn 4 and changes how Tailwind is configured.
+See [CHANGELOG.md](CHANGELOG.md) for the full list of breaking changes.
+
 ### Requirements
 - Node.js 20.19+ (or 22+)
 - Corepack (bundled with Node.js): `corepack enable`
@@ -90,18 +94,22 @@ yarn test:coverage   # coverage report
 - 📁 `public/` - Static files served as-is
 - 📁 `src/` - Source files
   - 📁 `assets/` - Static assets
-    - 📁 `icons/` - Inline SVG icons
+    - 📁 `icons/` - Inline SVG icons, imported with `?raw`
     - 📁 `images/` - Images
     - 📁 `styles/` - Styles
       - 📁 `vendor/` - Tailwind CSS and DaisyUI configuration
   - 📁 `components/` - Vue components
+    - 📁 `ComponentsPreview/` - The 28 showcase components
+    - 📁 `Home/` - Sections of the home page
   - 📁 `router/` - Vue Router configuration
   - 📁 `test/` - Test setup
   - 📁 `utils/` - Framework-agnostic helpers (theme handling)
-  - 📁 `views/` - Vue views
+  - 📁 `views/` - Vue views, one per route
   - 📄 `App.vue` - Root component
   - 📄 `config.js` - App-wide constants
   - 📄 `main.js` - Entry point
+
+Tests live next to the code they cover, as `*.test.js`.
 
 ### Styling
 Tailwind CSS is compiled through PostCSS (`postcss.config.js`), which is what makes it
