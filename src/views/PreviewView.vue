@@ -33,7 +33,7 @@ import MusicPlayer from '@/components/ComponentsPreview/MusicPlayer.vue';
 const components = [
 	{ title: 'Chart', category: 'Data display', component: Chart },
 	{ title: 'Countdown', category: 'Data display', component: Countdown },
-	{ title: 'Data Table', category: 'Data display', component: DataTable },
+	{ title: 'Data Table', category: 'Data display', component: DataTable, wide: true },
 	{ title: 'Event Schedule Card', category: 'Data display', component: EventScheduleCard },
 	{ title: 'Mockup Code', category: 'Data display', component: MockupCode },
 	{ title: 'Order List', category: 'Data display', component: OrderList },
@@ -138,11 +138,12 @@ const reset = () => {
 			Showing {{ visibleComponents.length }} of {{ components.length }} components
 		</p>
 
-		<div v-if="visibleComponents.length" class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+		<div v-if="visibleComponents.length" class="grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 			<article
 				v-for="entry in visibleComponents"
 				:key="entry.title"
 				class="card card-border border-base-300 bg-base-300 p-4 shadow-sm transition hover:shadow-lg"
+				:class="{ 'md:col-span-2': entry.wide }"
 			>
 				<div class="flex items-baseline justify-between gap-2 mb-4">
 					<h3 class="m-0">{{ entry.title }}</h3>

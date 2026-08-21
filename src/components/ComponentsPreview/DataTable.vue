@@ -9,11 +9,11 @@ const columns = [
 ];
 
 const orders = [
-	{ id: "#1042", customer: "Charlie Chapman", status: "Completed", badge: "badge-success", amount: 249 },
-	{ id: "#1043", customer: "Howard Hudson", status: "Failed", badge: "badge-error", amount: 78 },
-	{ id: "#1044", customer: "Fiona Fisher", status: "In progress", badge: "badge-warning", amount: 1320 },
-	{ id: "#1045", customer: "Nick Nelson", status: "Send", badge: "badge-info", amount: 512 },
-	{ id: "#1046", customer: "Amanda Anderson", status: "Completed", badge: "badge-success", amount: 96 },
+	{ id: "#1042", customer: "C. Chapman", status: "Completed", badge: "badge-success", amount: 249 },
+	{ id: "#1043", customer: "H. Hudson", status: "Failed", badge: "badge-error", amount: 78 },
+	{ id: "#1044", customer: "F. Fisher", status: "In progress", badge: "badge-warning", amount: 1320 },
+	{ id: "#1045", customer: "N. Nelson", status: "Send", badge: "badge-info", amount: 512 },
+	{ id: "#1046", customer: "A. Anderson", status: "Completed", badge: "badge-success", amount: 96 },
 ];
 
 const sortKey = ref("id");
@@ -55,8 +55,8 @@ const sortedOrders = computed(() => {
 				<table class="table table-xs">
 					<thead>
 						<tr>
-							<th v-for="column in columns" :key="column.key" scope="col">
-								<button type="button" class="btn btn-ghost btn-xs px-1 gap-1" :aria-label="`Sort by ${column.label}`" @click="sortBy(column.key)">
+							<th v-for="column in columns" :key="column.key" scope="col" class="whitespace-nowrap">
+								<button type="button" class="inline-flex items-center gap-1 font-semibold hover:underline" :aria-label="`Sort by ${column.label}`" @click="sortBy(column.key)">
 									{{ column.label }}
 									<span v-if="sortKey === column.key" aria-hidden="true">{{ sortAsc ? "▲" : "▼" }}</span>
 								</button>
@@ -65,10 +65,10 @@ const sortedOrders = computed(() => {
 					</thead>
 					<tbody>
 						<tr v-for="order in sortedOrders" :key="order.id">
-							<td class="font-mono" v-text="order.id"></td>
-							<td v-text="order.customer"></td>
-							<td><span class="badge badge-xs" :class="order.badge" v-text="order.status"></span></td>
-							<td class="text-right">${{ order.amount }}</td>
+							<td class="font-mono whitespace-nowrap" v-text="order.id"></td>
+							<td class="whitespace-nowrap" v-text="order.customer"></td>
+							<td><span class="badge badge-xs whitespace-nowrap" :class="order.badge" v-text="order.status"></span></td>
+							<td class="text-right whitespace-nowrap">${{ order.amount }}</td>
 						</tr>
 					</tbody>
 				</table>

@@ -2,9 +2,9 @@
 import { computed, ref } from 'vue';
 
 const notifications = ref([
-	{ id: 1, title: 'Build finished', detail: 'Production build succeeded in 42s.', read: false },
-	{ id: 2, title: 'New comment', detail: 'Anakin replied to your pull request.', read: false },
-	{ id: 3, title: 'Weekly report', detail: 'Your traffic grew by 12% this week.', read: true },
+	{ id: 1, title: 'Build finished', detail: 'Production build succeeded in 42s.', time: '2m', read: false },
+	{ id: 2, title: 'New comment', detail: 'Anakin replied to your pull request.', time: '1h', read: false },
+	{ id: 3, title: 'Weekly report', detail: 'Your traffic grew by 12% this week.', time: '2d', read: true },
 ]);
 
 const unreadCount = computed(() => notifications.value.filter((item) => !item.read).length);
@@ -25,20 +25,25 @@ const markAllRead = () => {
 			</span>
 		</div>
 		<div tabindex="0" class="dropdown-content bg-base-200 rounded-box z-20 mt-3 w-80 p-2 shadow-2xl ring-1 ring-base-300">
-			<ul class="menu menu-sm w-full p-0">
+			<p class="px-2 py-1 text-xs font-semibold uppercase tracking-wide opacity-60">Notifications</p>
+			<ul class="flex flex-col gap-1">
 				<li v-for="notification in notifications" :key="notification.id">
-					<a class="flex-col items-start gap-0.5">
-						<span class="flex items-center gap-2 font-semibold">
-							<span v-if="!notification.read" class="status status-primary" aria-label="Unread"></span>
-							{{ notification.title }}
+					<button type="button" class="flex w-full flex-col items-start gap-1 rounded-btn px-2 py-2 text-left hover:bg-base-300">
+						<span class="flex w-full items-center gap-2 text-sm font-semibold">
+							<span
+								class="size-2 shrink-0 rounded-full"
+								:class="notification.read ? 'bg-transparent' : 'bg-primary'"
+							></span>
+							<span class="grow">{{ notification.title }}</span>
+							<span class="shrink-0 text-xs font-normal opacity-50">{{ notification.time }}</span>
 						</span>
-						<span class="text-xs opacity-60">{{ notification.detail }}</span>
-					</a>
+						<span class="pl-4 text-xs leading-snug opacity-60">{{ notification.detail }}</span>
+					</button>
 				</li>
 			</ul>
 			<button
 				type="button"
-				class="btn btn-ghost btn-sm btn-block mt-1"
+				class="btn btn-ghost btn-sm btn-block mt-2"
 				:disabled="!unreadCount"
 				@click="markAllRead"
 			>

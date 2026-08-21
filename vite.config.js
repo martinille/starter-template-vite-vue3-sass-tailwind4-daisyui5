@@ -33,6 +33,16 @@ export default defineConfig(({ mode }) => ({
 
 	plugins: [vue(), spaFallback()],
 
+	/**
+	 * Pre-bundle the runtime dependencies at start-up. Without this list Vite
+	 * discovers them lazily and, when it finds one mid-session, it re-optimises
+	 * and forces a full page reload - which looks exactly like "HMR stopped
+	 * working". Add any new runtime dependency here.
+	 */
+	optimizeDeps: {
+		include: ['vue', 'vue-router'],
+	},
+
 	css: {
 		devSourcemap: mode === 'development',
 	},
