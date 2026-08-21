@@ -4,19 +4,22 @@
 	<meta charset="UTF-8"/>
 	<link rel="icon" type="image/svg+xml" href="/vite.svg"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="Starter template with Vite, Vue 3, Sass, Tailwind CSS 4 and DaisyUI 5."/>
 	<title>Starter template: Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5</title>
 
 	<script>
-		// Set theme based on system or saved theme
-		(function() {
+		(function () {
+			var themes = ['system', 'light', 'dark', 'cupcake', 'retro', 'valentine', 'business', 'coffee', 'nord'];
+			var saved;
 			try {
-				const savedTheme = localStorage.getItem('theme'); // 'system', 'light' nebo 'dark'
-				const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; // true or false
-				const theme = savedTheme || (prefersDark ? 'dark' : 'light'); // 'light' or 'dark'
-				document.documentElement.setAttribute('data-theme', theme); // save theme to html tag
+				saved = localStorage.getItem('theme');
 			} catch (e) {
-				console.error('Error setting theme:', e);
+				saved = null;
 			}
+			if (!saved || themes.indexOf(saved) === -1 || saved === 'system') {
+				saved = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+			}
+			document.documentElement.setAttribute('data-theme', saved);
 		})();
 	</script>
 </head>
