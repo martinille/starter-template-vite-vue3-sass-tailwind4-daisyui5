@@ -10,7 +10,3 @@
 		<router-link to="/" class="btn btn-lg btn-primary mt-10">Go back to home</router-link>
 	</div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

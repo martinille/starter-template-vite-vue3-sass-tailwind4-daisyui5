@@ -1,12 +1,11 @@
 <script setup>
-import { ref } from "vue";
 import logoVue from "@/assets/images/vue.svg";
 import logoDaisyUi from '@/assets/images/daisyui-logomark.svg';
 import logoTailwindcss from '@/assets/images/tailwindcss.svg';
 import logoSass from '@/assets/images/sass.svg';
-const logoVite = import.meta.env.BASE_URL + '/vite.svg';
+const logoVite = `${import.meta.env.BASE_URL}vite.svg`;
 
-const items = ref([
+const items = [
 	{
 		image: logoVite,
 		title: 'Vite',
@@ -33,7 +32,7 @@ const items = ref([
 		desc: 'UI library',
 		url: 'https://daisyui.com/',
 	},
-]);
+];
 </script>
 
 <template>
@@ -41,9 +40,9 @@ const items = ref([
 		<h2>Packages included:</h2>
 
 		<div class="flex flex-wrap gap-4 items-center justify-center">
-			<div v-for="item in items" class="flex flex-row flex-grow gap-2 p-4 bg-base-100 items-center h-full rounded-box ring-1 ring-base-content/10 text-left max-w-60">
+			<div v-for="item in items" :key="item.title" class="flex flex-row flex-grow gap-2 p-4 bg-base-100 items-center h-full rounded-box ring-1 ring-base-content/10 text-left max-w-60">
 				<div v-if="item.image">
-					<img :src="item.image" class="size-10" alt="Vite logo"/>
+					<img :src="item.image" class="size-10" :alt="`${item.title} logo`" />
 				</div>
 				<div>
 					<h4>
@@ -56,10 +55,5 @@ const items = ref([
 				</div>
 			</div>
 		</div>
-
 	</div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

@@ -57,16 +57,12 @@ const components = [
 		<p class="text-center text-base text-base-content/70 mb-16">You can find the source code in the <code><span class="icon">📁</span>src/components/ComponentsPreview</code> directory.</p>
 
 		<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-			<div class="card card-border border-base-300 bg-base-300 p-4 shadow-sm" v-for="c in components" :key="c.title">
+			<div v-for="c in components" :key="c.title" class="card card-border border-base-300 bg-base-300 p-4 shadow-sm">
 				<h3 class="text-center mb-4" v-text="c.title"></h3>
-				<div class="flex place-content-center" v-if="c.component">
-					<component :is="c.component"/>
+				<div v-if="c.component" class="flex place-content-center">
+					<component :is="c.component" />
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

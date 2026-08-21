@@ -9,7 +9,3 @@
 		<pre class="text-sm" data-prefix=">"><code>Done!</code></pre>
 	</div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

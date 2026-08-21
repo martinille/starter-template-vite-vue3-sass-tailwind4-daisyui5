@@ -12,16 +12,16 @@ import SubscriptionPlanCard from "@/components/ComponentsPreview/SubscriptionPla
 	</div>
 	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 		<div class="flex items-start justify-center">
-			<MusicPlayer class="shadow-[0_20px_30px_-5px_rgba(0,0,0,0.25)]"/>
+			<MusicPlayer class="shadow-[0_20px_30px_-5px_rgba(0,0,0,0.25)]" />
 		</div>
 		<div class="flex items-start justify-center">
-			<AccountRegistrationForm class="shadow-[0_20px_30px_-5px_rgba(0,0,0,0.25)]"/>
+			<AccountRegistrationForm class="shadow-[0_20px_30px_-5px_rgba(0,0,0,0.25)]" />
 		</div>
 		<div class="flex items-start justify-center">
-			<PriceRange class="shadow-[0_20px_30px_-5px_rgba(0,0,0,0.25)]"/>
+			<PriceRange class="shadow-[0_20px_30px_-5px_rgba(0,0,0,0.25)]" />
 		</div>
 		<div class="flex items-start justify-center">
-			<SubscriptionPlanCard class="shadow-[0_20px_30px_-5px_rgba(0,0,0,0.25)]"/>
+			<SubscriptionPlanCard class="shadow-[0_20px_30px_-5px_rgba(0,0,0,0.25)]" />
 		</div>
 	</div>
 	<div class="text-center mt-10">
@@ -30,7 +30,3 @@ import SubscriptionPlanCard from "@/components/ComponentsPreview/SubscriptionPla
 		</router-link>
 	</div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

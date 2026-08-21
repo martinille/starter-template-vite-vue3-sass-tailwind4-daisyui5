@@ -1,42 +1,30 @@
 <script setup>
+import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { computed } from "vue";
 
 const route = useRoute();
 
-const breadcrumbs = computed(() => {
-	return route.matched.filter(record => record.name.toLowerCase() !== 'home') // Filter out the home route
-});
+const isHome = computed(() => route.name === 'home');
 
-const isHomeActive = computed(() => {
-	return route.name && route.name.toLowerCase() === 'home';
-});
+const breadcrumbs = computed(() =>
+	route.matched.filter((record) => record.name !== 'home' && record.meta?.title)
+);
 </script>
 
 <template>
-	<div class="border-b border-b-base-200/50 pt-3 pb-2">
-		<div class="container-center text-left ">
+	<nav class="border-b border-b-base-200/50 pt-3 pb-2" aria-label="Breadcrumb">
+		<div class="container-center text-left">
 			<div class="breadcrumbs inline-flex gap-4">
 				<span class="text-base-content/70">You are here:</span>
 				<ul>
 					<li>
-						<router-link
-							:to="{ name: 'home' }"
-							:class="{ 'font-semibold': isHomeActive }"
-						>Home</router-link>
+						<RouterLink :to="{ name: 'home' }" :class="{ 'font-semibold': isHome }">Home</RouterLink>
 					</li>
-					<li v-for="(breadcrumb, index) in breadcrumbs" :key="index">
-						<router-link
-							:to="breadcrumb.path"
-							class="font-semibold"
-						>{{ breadcrumb.meta.title }}</router-link>
+					<li v-for="breadcrumb in breadcrumbs" :key="breadcrumb.path">
+						<RouterLink :to="{ name: breadcrumb.name, params: route.params }" class="font-semibold">{{ breadcrumb.meta.title }}</RouterLink>
 					</li>
 				</ul>
 			</div>
 		</div>
-	</div>
+	</nav>
 </template>
-
-<style scoped lang="scss">
-
-</style>

@@ -2,7 +2,7 @@
 import { ref } from "vue";
 
 const projectNameDefault = '<project-name>';
-let projectName = ref("");
+const projectName = ref("");
 </script>
 
 <template>
@@ -19,11 +19,11 @@ let projectName = ref("");
 				<div class="flex gap-2 items-center text-base-content/70">
 					<label class="form-label whitespace-nowrap" for="project-name">Project Name:</label>
 					<input
-						type="text"
 						id="project-name"
+						v-model="projectName"
+						type="text"
 						class="input input-bordered"
 						placeholder="my-project"
-						v-model="projectName"
 					/>
 				</div>
 			</div>
@@ -44,11 +44,12 @@ let projectName = ref("");
 					<span class="badge badge-lg badge-success mr-2">2</span>
 					Install dependencies
 				</h3>
-				<p class="mb-2 text-base-content/70">Install the dependencies with <code>npm install</code>.</p>
+				<p class="mb-2 text-base-content/70">Enable Corepack and install the dependencies with <code>yarn install</code>.</p>
 			</div>
 			<div class="mockup-code text-md w-full flex-1">
 				<pre class="opacity-50 text-bold"><code># install dependencies</code></pre>
-				<pre><code>npm install</code></pre>
+				<pre><code>corepack enable</code></pre>
+				<pre><code>yarn install</code></pre>
 			</div>
 		</div>
 		<div class="flex flex-col flex-wrap items-start justify-center gap-4 w-full mb-10 md:flex-row">
@@ -61,7 +62,7 @@ let projectName = ref("");
 			</div>
 			<div class="mockup-code text-md w-full flex-1">
 				<pre class="opacity-50 text-bold"><code># run the development server</code></pre>
-				<pre><code>npm run dev</code></pre>
+				<pre><code>yarn dev</code></pre>
 			</div>
 		</div>
 		<div class="flex flex-col flex-wrap items-start justify-center gap-4 w-full mb-10 md:flex-row">
@@ -81,7 +82,6 @@ let projectName = ref("");
 						<li><code>📄src/main.js</code></li>
 					</ul>
 				</div>
-
 			</div>
 			<div class="mockup-browser border-base-300 bg-base-100 border flex-1">
 				<div class="mockup-browser-toolbar">
@@ -104,7 +104,3 @@ let projectName = ref("");
 		</div>
 	</div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

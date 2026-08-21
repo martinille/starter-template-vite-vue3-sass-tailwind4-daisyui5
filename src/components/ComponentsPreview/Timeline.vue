@@ -74,7 +74,3 @@
 		</li>
 	</ul>
 </template>
-
-<style scoped lang="scss">
-
-</style>
