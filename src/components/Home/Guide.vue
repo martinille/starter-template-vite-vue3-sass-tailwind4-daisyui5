@@ -82,6 +82,14 @@ const projectName = ref("");
 						<li><code>📄src/main.js</code></li>
 					</ul>
 				</div>
+				<div class="mb-2 text-base-content/70">
+					<span class="font-semibold">📌 Before you commit:</span>
+					<ul class="[&_li]:my-1.5">
+						<li><code>yarn lint</code> <span class="text-base-content/70 text-sm">&larr; ESLint, add <code>--fix</code> to apply the fixes</span></li>
+						<li><code>yarn test</code> <span class="text-base-content/70 text-sm">&larr; Vitest, tests live next to the code as <code>*.test.js</code></span></li>
+						<li><code>yarn build</code> <span class="text-base-content/70 text-sm">&larr; production build into <code>dist/</code></span></li>
+					</ul>
+				</div>
 			</div>
 			<div class="mockup-browser border-base-300 bg-base-100 border flex-1">
 				<div class="mockup-browser-toolbar">

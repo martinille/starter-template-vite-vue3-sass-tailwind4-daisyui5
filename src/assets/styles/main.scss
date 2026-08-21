@@ -1,8 +1,14 @@
+/**
+ * Styles entry point, imported once from src/main.js.
+ *
+ * Order matters: Tailwind first, then DaisyUI (which builds on Tailwind's
+ * theme), then your own styles. Tailwind and DaisyUI are configured in CSS,
+ * see the vendor/ directory.
+ */
 @forward "vendor/tailwind.css";
 @forward "vendor/daisyui.css";
 
+/* Project-wide styles and helpers. */
 .container-center {
 	@apply container mx-auto px-4;
 }
-
-

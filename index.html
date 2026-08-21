@@ -7,16 +7,25 @@
 	<meta name="description" content="Starter template with Vite, Vue 3, Sass, Tailwind CSS 4 and DaisyUI 5."/>
 	<title>Starter template: Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5</title>
 
+	<!--
+		Applies the saved theme before the first paint, so the page never flashes
+		the wrong colours while Vue is still booting. Keep this inline and keep it
+		in <head> - moving it to a module or to the bottom of <body> brings the
+		flash back.
+
+		"system" is not a real DaisyUI theme, it means "follow the OS", so it is
+		resolved to light/dark here. The rest of the theme handling (and the list
+		of available themes) lives in src/utils/theme.js.
+	-->
 	<script>
 		(function () {
-			var themes = ['system', 'light', 'dark', 'cupcake', 'retro', 'valentine', 'business', 'coffee', 'nord'];
 			var saved;
 			try {
 				saved = localStorage.getItem('theme');
 			} catch (e) {
 				saved = null;
 			}
-			if (!saved || themes.indexOf(saved) === -1 || saved === 'system') {
+			if (!saved || saved === 'system') {
 				saved = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 			}
 			document.documentElement.setAttribute('data-theme', saved);

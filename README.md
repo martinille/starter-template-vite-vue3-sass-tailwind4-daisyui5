@@ -69,6 +69,17 @@ unpublished within hours, so the delay keeps a freshly backdoored version out of
 project. Use `npmPreapprovedPackages` to whitelist a package when a security patch has
 to land immediately.
 
+### Testing
+Tests run on [Vitest](https://vitest.dev/) in a jsdom environment and live next to the
+code they cover, as `*.test.js`. `src/test/setup.js` stubs `window.matchMedia`, which
+jsdom does not implement and the theme handling needs.
+
+```bash
+yarn test            # run once
+yarn test:watch      # re-run on change
+yarn test:coverage   # coverage report
+```
+
 ### Folder structure
 - 📁 `public/` - Static files served as-is
 - 📁 `src/` - Source files

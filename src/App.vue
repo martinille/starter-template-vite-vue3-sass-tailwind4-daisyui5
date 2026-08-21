@@ -13,3 +13,7 @@ import TheHeader from '@/components/TheHeader.vue';
 
 	<TheFooter />
 </template>
+
+<style scoped lang="scss">
+/* Component-scoped Sass goes here. Project-wide styles live in src/assets/styles/main.scss. */
+</style>

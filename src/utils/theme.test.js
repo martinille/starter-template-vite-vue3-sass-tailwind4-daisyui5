@@ -84,6 +84,26 @@ describe('setTheme', () => {
 	});
 });
 
+describe('initTheme', () => {
+	it('normalises a stale stored theme and starts following the OS', async () => {
+		localStorage.setItem('theme', 'not-a-theme');
+		const { initTheme } = await loadTheme();
+		const stop = initTheme();
+		expect(document.documentElement.getAttribute('data-theme')).toBe('light');
+		setPrefersDark(true);
+		expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
+		stop();
+	});
+
+	it('re-applies an explicitly stored theme', async () => {
+		localStorage.setItem('theme', 'coffee');
+		const { initTheme } = await loadTheme();
+		const stop = initTheme();
+		expect(document.documentElement.getAttribute('data-theme')).toBe('coffee');
+		stop();
+	});
+});
+
 describe('watchSystemTheme', () => {
 	it('follows the OS preference while the theme is "system"', async () => {
 		const { setTheme, watchSystemTheme } = await loadTheme();
