@@ -24,7 +24,7 @@ v2 switches the package manager to Yarn 4 and changes how Tailwind is configured
 See [CHANGELOG.md](CHANGELOG.md) for the full list of breaking changes.
 
 ### Requirements
-- Node.js 20.19+ (or 22+)
+- Node.js 20.19+, or 22.12+ (Vite 8 rejects 22.0-22.11)
 - Corepack (bundled with Node.js): `corepack enable`
 
 ### Template initialization by forking (recommended) 🍴
@@ -81,7 +81,8 @@ to land immediately.
 
 ### Testing
 Tests run on [Vitest](https://vitest.dev/) in a jsdom environment and live next to the
-code they cover, as `*.test.js`. `src/test/setup.js` stubs `window.matchMedia`, which
+code they cover, as `*.test.js`. There is no `vitest.config.js` - the configuration is the
+`test` block in `vite.config.js`. `src/test/setup.js` stubs `window.matchMedia`, which
 jsdom does not implement and the theme handling needs.
 
 ```bash
@@ -96,6 +97,7 @@ yarn test:coverage   # coverage report
   - 📁 `assets/` - Static assets
     - 📁 `icons/` - Inline SVG icons, imported with `?raw`
     - 📁 `images/` - Images
+      - 📁 `avatars/` - Placeholder avatars used by the preview components
     - 📁 `styles/` - Styles
       - 📁 `vendor/` - Tailwind CSS and DaisyUI configuration
   - 📁 `components/` - Vue components
@@ -103,7 +105,7 @@ yarn test:coverage   # coverage report
     - 📁 `Home/` - Sections of the home page
   - 📁 `router/` - Vue Router configuration
   - 📁 `test/` - Test setup
-  - 📁 `utils/` - Framework-agnostic helpers (theme handling)
+  - 📁 `utils/` - Reusable logic outside components (theme handling)
   - 📁 `views/` - Vue views, one per route
   - 📄 `App.vue` - Root component
   - 📄 `config.js` - App-wide constants
@@ -111,11 +113,15 @@ yarn test:coverage   # coverage report
 
 Tests live next to the code they cover, as `*.test.js`.
 
+Imports use the `@` alias for `src/`, so `@/components/TheHeader.vue` works from anywhere.
+It is declared in `vite.config.js` for the bundler and in `jsconfig.json` so editors follow it.
+
 ### Styling
 Tailwind CSS is compiled through PostCSS (`postcss.config.js`), which is what makes it
 work together with Sass. The Tailwind and DaisyUI configuration lives in CSS:
 
-- `src/assets/styles/vendor/tailwind.css` - theme tokens, base/component/utility layers, custom variants
+- `src/assets/styles/vendor/tailwind.css` - heading styles, a `@custom-variant` per theme, and commented-out
+  placeholders for theme tokens and the base/utility layers
 - `src/assets/styles/vendor/daisyui.css` - enabled DaisyUI themes and theme overrides
 - `src/assets/styles/main.scss` - entry point, project-wide styles
 
@@ -139,6 +145,9 @@ The template includes a GitHub workflow for deployment to GitHub Pages. To enabl
 The build also writes `dist/404.html` as a copy of `index.html`, so deep links such as
 `/preview` keep working on static hosts that know nothing about client-side routing.
 See the `spaFallback` plugin in `vite.config.js`.
+
+### Licence
+Released under the [MIT licence](LICENSE.md).
 
 ### TODO
 - [ ] 🕘 Minimal template (no additional features)

@@ -8,6 +8,16 @@ const daisyuiCss = readFileSync(
 	'utf8'
 );
 
+const indexHtml = readFileSync(resolve(process.cwd(), 'index.html'), 'utf8');
+
+const baseColourFor = (themeName) => {
+	const block = daisyuiCss.split('@plugin "daisyui/theme"').find((part) => part.includes(`name: "${themeName}"`));
+	return block.match(/--color-base-100:\s*([^;]+);/)[1].trim();
+};
+
+const themeColourFor = (scheme) =>
+	indexHtml.match(new RegExp(`<meta name="theme-color" content="([^"]+)" media="\\(prefers-color-scheme: ${scheme}\\)"`))[1];
+
 const enabledDaisyuiThemes = daisyuiCss
 	.match(/^\s*themes:\s*([^;]+);/m)[1]
 	.split(',')
@@ -28,5 +38,19 @@ describe('theme configuration', () => {
 
 	it('has no duplicate entries', () => {
 		expect(new Set(pickableThemes).size).toBe(pickableThemes.length);
+	});
+});
+
+describe('browser theme-color', () => {
+	it('declares one value per colour scheme', () => {
+		expect(themeColourFor('light')).toMatch(/^#[0-9a-f]{6}$/i);
+		expect(themeColourFor('dark')).toMatch(/^#[0-9a-f]{6}$/i);
+	});
+
+	it('still matches the base-100 colours it was derived from', () => {
+		expect(baseColourFor('light')).toBe('oklch(100% 0 0)');
+		expect(baseColourFor('dark')).toBe('oklch(30% 0.016 252.42)');
+		expect(themeColourFor('light')).toBe('#ffffff');
+		expect(themeColourFor('dark')).toBe('#282e36');
 	});
 });
