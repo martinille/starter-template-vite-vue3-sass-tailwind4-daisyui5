@@ -46,5 +46,10 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "packageManager": "yarn@4.18.0",
-  "private": true
+  "private": true,
+  "dependenciesMeta": {
+    "@parcel/watcher": {
+      "built": false
+    }
+  }
 }

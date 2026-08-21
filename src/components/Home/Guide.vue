@@ -75,12 +75,14 @@ const projectName = ref("");
 					📌 Open your browser and go to <code>http://localhost:5173</code>.
 				</p>
 				<div class="mb-2 text-base-content/70">
-					<span class="font-semibold">📌 You can start from scratch by removing everything in <code>src/</code> except:</span>
+					<span class="font-semibold">📌 To strip out this demo and keep the wiring, delete:</span>
 					<ul class="[&_li]:my-1.5">
-						<li><code>📄src/assets/styles/*</code></li>
-						<li><code>📄src/App.vue</code> <span class="text-base-content/70 text-sm">&larr; start editing here</span></li>
-						<li><code>📄src/main.js</code></li>
+						<li><code>📁 src/components/ComponentsPreview/</code></li>
+						<li><code>📁 src/components/Home/</code></li>
+						<li><code>📄 src/views/PreviewView.vue</code> <span class="text-base-content/70 text-sm">&larr; and its <code>*.test.js</code> files</span></li>
 					</ul>
+					<span class="font-semibold">Then remove the <code>componentsPreview</code> route from <code>src/router/routes.js</code>, drop the links to it in the header and footer, and replace the contents of <code>src/views/HomeView.vue</code>.</span>
+					<p class="mt-1">Routing, theming, the 404 page and the tests keep working - only the showcase goes away.</p>
 				</div>
 				<div class="mb-2 text-base-content/70">
 					<span class="font-semibold">📌 Before you commit:</span>

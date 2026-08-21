@@ -3267,6 +3267,9 @@ __metadata:
     vue: "npm:^3.5.41"
     vue-eslint-parser: "npm:^10.4.1"
     vue-router: "npm:^5.2.0"
+  dependenciesMeta:
+    "@parcel/watcher":
+      built: false
   languageName: unknown
   linkType: soft
 
