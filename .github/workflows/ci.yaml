@@ -15,15 +15,15 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v5
+    - name: Enable Corepack
+      run: corepack enable
     - name: Set up Node.js
       uses: actions/setup-node@v5
       with:
         node-version: 22
         cache: yarn
     - name: Install dependencies
-      run: |
-        corepack enable
-        yarn install --immutable
+      run: yarn install --immutable
     - name: Lint
       run: yarn lint
     - name: Test
