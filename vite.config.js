@@ -2,9 +2,26 @@
  * Vite configuration file
  * Docs: https://vite.dev/config/
  */
+import { copyFileSync, existsSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+
+/**
+ * Static hosts (GitHub Pages among them) know nothing about client-side routing,
+ * so opening https://example.com/preview directly returns their own 404 page.
+ * Shipping a copy of index.html as 404.html makes the host serve the app instead,
+ * and Vue Router then resolves the path. Drop this if you deploy behind a server
+ * that can rewrite unknown paths to index.html.
+ */
+const spaFallback = () => ({
+	name: 'spa-fallback',
+	writeBundle(options) {
+		const index = resolve(options.dir, 'index.html');
+		if (existsSync(index)) copyFileSync(index, resolve(options.dir, '404.html'));
+	},
+});
 
 export default defineConfig(({ mode }) => ({
 	/**
@@ -14,7 +31,7 @@ export default defineConfig(({ mode }) => ({
 	 */
 	base: process.env.BASE_URL || '/',
 
-	plugins: [vue()],
+	plugins: [vue(), spaFallback()],
 
 	css: {
 		devSourcemap: mode === 'development',

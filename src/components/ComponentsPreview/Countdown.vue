@@ -1,20 +1,20 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const counter = ref(59)
+let timer
 
 function count() {
-	if (counter.value > 0) {
-		counter.value--
-		setTimeout(count, 1000)
-	} else {
-		counter.value = 59
-		setTimeout(count, 1000)
-	}
+	counter.value = counter.value > 0 ? counter.value - 1 : 59
+	timer = setTimeout(count, 1000)
 }
 
 onMounted(() => {
 	count()
+})
+
+onUnmounted(() => {
+	clearTimeout(timer)
 })
 </script>
 

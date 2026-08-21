@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-let playing = ref(false)
+const playing = ref(false)
 </script>
 
 <template>

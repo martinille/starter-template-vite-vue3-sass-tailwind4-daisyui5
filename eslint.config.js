@@ -25,6 +25,9 @@ export default [
 		},
 		rules: {
 			'no-empty': ['error', { allowEmptyCatch: true }],
+			'prefer-const': 'error',
+			eqeqeq: 'error',
+			'vue/require-default-prop': 'off',
 			'vue/multi-word-component-names': 'off',
 			'vue/max-attributes-per-line': 'off',
 			'vue/singleline-html-element-content-newline': 'off',

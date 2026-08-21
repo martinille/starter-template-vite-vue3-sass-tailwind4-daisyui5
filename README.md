@@ -119,5 +119,9 @@ The template includes a GitHub workflow for deployment to GitHub Pages. To enabl
 2. Select the Pages section
 3. In the "Build and deployment" area, set the source to "GitHub Actions"
 
+The build also writes `dist/404.html` as a copy of `index.html`, so deep links such as
+`/preview` keep working on static hosts that know nothing about client-side routing.
+See the `spaFallback` plugin in `vite.config.js`.
+
 ### TODO
 - [ ] 🕘 Minimal template (no additional features)
