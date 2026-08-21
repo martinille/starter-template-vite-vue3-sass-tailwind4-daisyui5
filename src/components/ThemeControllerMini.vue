@@ -1,4 +1,5 @@
 <script setup>
+import ThemeSwatch from '@/components/ThemeSwatch.vue';
 import { availableThemes, currentTheme, setTheme } from '@/utils/theme.js';
 </script>
 
@@ -10,15 +11,13 @@ import { availableThemes, currentTheme, setTheme } from '@/utils/theme.js';
 				<path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
 			</svg>
 		</div>
-		<ul tabindex="0" class="dropdown-content bg-base-200 rounded-box z-10 w-40 p-2 shadow-2xl ring-1 ring-base-300">
+		<ul tabindex="0" class="dropdown-content bg-base-200 rounded-box z-10 w-44 p-2 shadow-2xl ring-1 ring-base-300">
 			<li v-for="theme in availableThemes" :key="theme.name">
 				<label
-					class="flex items-center gap-2 btn btn-sm btn-block btn-ghost justify-start"
+					class="flex items-center gap-2 btn btn-sm btn-block btn-ghost justify-start capitalize"
 					:class="{ 'btn-active': currentTheme === theme.name }"
 				>
-					<!-- eslint-disable-next-line vue/no-v-html -->
-					<span v-if="theme.icon" v-html="theme.icon"></span>
-					<span v-else class="size-5"></span>
+					<ThemeSwatch :theme="theme" />
 					<input
 						type="radio"
 						name="theme-dropdown"

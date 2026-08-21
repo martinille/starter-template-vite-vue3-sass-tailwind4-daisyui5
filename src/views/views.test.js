@@ -29,9 +29,11 @@ describe('views', () => {
 		expect(wrapper.find('main').attributes('id')).toBe('main');
 	});
 
-	it('renders the 404 view', async () => {
+	it('renders the 404 view with the path that was not found', async () => {
 		const wrapper = await mountWithRouter(NotFoundView, '/nope');
 		expect(wrapper.text()).toContain('404');
+		expect(wrapper.text()).toContain('/nope');
+		expect(wrapper.find('a[href="/"]').exists()).toBe(true);
 	});
 
 	it('renders every preview component without errors', async () => {

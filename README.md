@@ -12,8 +12,8 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - ✅ [Vitest](https://vitest.dev/) + [Vue Test Utils](https://test-utils.vuejs.org/) for unit tests
 - ✅ [ESLint](https://eslint.org/) for linting, with accessibility rules
 - ✅ [Yarn 4](https://yarnpkg.com/) via Corepack, with a 7-day minimum dependency age
-- ✅ **Theme configuration** (light, dark, system, ...)
-- ✅ **UI blocks (components)** pre-configured with DaisyUI
+- ✅ **Theme configuration** (light, dark, system, ...) with live colour swatches
+- ✅ **28 UI blocks (components)** pre-configured with DaisyUI, in a searchable, filterable preview
 - ✅ **GitHub Actions** for CI and GitHub Pages deployment
 
 ### Demo

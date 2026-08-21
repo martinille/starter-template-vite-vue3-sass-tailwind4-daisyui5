@@ -8,7 +8,7 @@ import SubscriptionPlanCard from "@/components/ComponentsPreview/SubscriptionPla
 <template>
 	<h2 class="text-center">UI blocks (components) preview:</h2>
 	<div class="text-base-content/70 mb-8 text-center">
-		<p>This template also includes some components that you can use in your projects. You can find the source codes in the <code><span class="icon">📁</span>src/components/ComponentsPreview</code> directory.</p>
+		<p>This template also includes 28 components that you can use in your projects. You can find the source codes in the <code><span class="icon">📁</span>src/components/ComponentsPreview</code> directory.</p>
 	</div>
 	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
 		<div class="flex items-start justify-center">

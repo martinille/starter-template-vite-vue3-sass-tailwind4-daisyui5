@@ -1,4 +1,5 @@
 <script setup>
+import ThemeSwatch from '@/components/ThemeSwatch.vue';
 import { availableThemes, currentTheme, setTheme } from '@/utils/theme.js';
 </script>
 
@@ -9,11 +10,10 @@ import { availableThemes, currentTheme, setTheme } from '@/utils/theme.js';
 			<label
 				v-for="theme in availableThemes"
 				:key="theme.name"
-				class="btn btn-ghost"
+				class="btn btn-ghost capitalize"
 				:class="{ 'btn-active': currentTheme === theme.name }"
 			>
-				<!-- eslint-disable-next-line vue/no-v-html -->
-				<span v-if="theme.icon" v-html="theme.icon"></span>
+				<ThemeSwatch :theme="theme" />
 				{{ theme.name }}
 				<input
 					type="radio"
