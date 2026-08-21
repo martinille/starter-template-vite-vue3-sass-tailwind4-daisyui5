@@ -10,23 +10,39 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5173",
+    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue": "^3.5.41",
+    "vue-router": "^5.2.0"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.6",
-    "@tailwindcss/vite": "^4.0.6",
-    "@vitejs/plugin-vue": "^5.2.1",
-    "autoprefixer": "^10.4.20",
-    "daisyui": "^5.0.0",
-    "postcss": "^8.5.2",
-    "sass": "^1.85.0",
-    "tailwindcss": "^4.0.9",
-    "vite": "^6.1.0"
-  }
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vue/compiler-dom": "^3.5.41",
+    "@vue/test-utils": "^2.4.11",
+    "daisyui": "^5.7.17",
+    "eslint": "^10.8.1",
+    "eslint-plugin-vue": "^10.10.0",
+    "globals": "^17.11.0",
+    "jsdom": "^30.0.1",
+    "sass-embedded": "^1.102.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.2.1",
+    "vitest": "^4.1.10",
+    "vue-eslint-parser": "^10.4.1"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "packageManager": "yarn@4.18.0"
 }
