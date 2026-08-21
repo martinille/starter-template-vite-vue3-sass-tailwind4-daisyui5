@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  check:
+    name: Lint, test and build
+    permissions:
+      contents: read
+    runs-on: ubuntu-24.04
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v5
+    - name: Set up Node.js
+      uses: actions/setup-node@v5
+      with:
+        node-version: 22
+        cache: yarn
+    - name: Install dependencies
+      run: |
+        corepack enable
+        yarn install --immutable
+    - name: Lint
+      run: yarn lint
+    - name: Test
+      run: yarn test
+    - name: Build
+      run: yarn build
