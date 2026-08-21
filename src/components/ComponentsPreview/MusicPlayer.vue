@@ -9,7 +9,7 @@ const playing = ref(false)
 		<div class="card-body my-2">
 			<div class="flex justify-around items-center">
 				<!-- Previous Track -->
-				<button class="btn btn-square btn-neutral">
+				<button type="button" class="btn btn-square btn-neutral" aria-label="Previous track">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
 						<path
 							stroke-linecap="round" stroke-linejoin="round"
@@ -19,7 +19,7 @@ const playing = ref(false)
 				</button>
 
 				<!-- Play/Pause -->
-				<button class="btn btn-square btn-neutral btn-lg" @click="playing = !playing">
+				<button type="button" class="btn btn-square btn-neutral btn-lg" :aria-label="playing ? 'Pause' : 'Play'" @click="playing = !playing">
 					<!-- Play -->
 					<svg v-if="!playing" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 shrink-0">
 						<path
@@ -34,7 +34,7 @@ const playing = ref(false)
 				</button>
 
 				<!-- Next Track -->
-				<button class="btn btn-square btn-neutral">
+				<button type="button" class="btn btn-square btn-neutral" aria-label="Next track">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
 						<path
 							stroke-linecap="round" stroke-linejoin="round"
@@ -45,12 +45,12 @@ const playing = ref(false)
 			</div>
 			<div class="mt-2 text-center">
 				<h6 class="text-sm font-bold">PM Zoomcall ASMR</h6>
-				<p class="text-xs opacity-50">Project Manager talking for 2 hours</p>
+				<p class="text-xs opacity-50">Project Manager talking for an hour</p>
 			</div>
 		</div>
 		<div class="flex flex-col px-6 py-4 border-t border-base-300">
 			<div class="relative mt-6">
-				<div class="absolute tooltip top-2 tooltip-open before:text-xs" style="inset-inline-start:27%" data-tip="24:58"></div>
+				<div class="absolute tooltip top-2 tooltip-open before:text-xs" style="inset-inline-start:27%" data-tip="15:40"></div>
 				<progress class="progress" value="27" max="100" aria-label="Playback progress"></progress>
 			</div>
 			<div class="flex text-xs opacity-50 justify-between">
@@ -59,7 +59,7 @@ const playing = ref(false)
 			</div>
 		</div>
 		<div class="flex justify-around items-center pb-6 px-2">
-			<button class="btn btn-square">
+			<button type="button" class="btn btn-square" aria-label="Volume">
 				<svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
 						d="M24 6V42C17 42 11.7985 32.8391 11.7985 32.8391H6C4.89543 32.8391 4 31.9437 4 30.8391V17.0108C4 15.9062 4.89543 15.0108 6 15.0108H11.7985C11.7985 15.0108 17 6 24 6Z"
@@ -71,7 +71,7 @@ const playing = ref(false)
 					></path>
 				</svg>
 			</button>
-			<button class="btn btn-square">
+			<button type="button" class="btn btn-square" aria-label="Shuffle">
 				<svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M40 33L44 37L40 41" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
 					<path d="M40 7L44 11L40 15" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -79,7 +79,7 @@ const playing = ref(false)
 					<path d="M4 37H11C18.1797 37 24 31.1797 24 24C24 16.8203 18.1797 11 11 11H4" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
 				</svg>
 			</button>
-			<button class="btn btn-square">
+			<button type="button" class="btn btn-square" aria-label="Repeat">
 				<svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M4 25C4 18.3502 9.39624 13 16 13H44" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
 					<path d="M38 7L44 13L38 19" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -87,7 +87,7 @@ const playing = ref(false)
 					<path d="M10 41L4 35L10 29" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
 				</svg>
 			</button>
-			<button class="btn btn-square">
+			<button type="button" class="btn btn-square" aria-label="Audio output">
 				<svg width="16" height="16" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M42 30V24.4615C42 14.2655 33.9411 6 24 6C14.0589 6 6 14.2655 6 24.4615V30" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
 					<path d="M34 32C34 29.7909 35.7909 28 38 28H42V42H38C35.7909 42 34 40.2091 34 38V32Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"></path>

@@ -18,7 +18,7 @@ function closeDialog(message) {
 	<div class="card card-sm card-border border-base-300 bg-base-100 w-full max-w-80">
 		<div class="card-body gap-4 items-center text-center">
 			<h2 class="font-semibold">Archive project</h2>
-			<p class="text-xs text-base-content/70">Opens a native dialog element styled by daisyUI.</p>
+			<p class="text-xs text-base-content/70">Opens a native dialog element styled by DaisyUI.</p>
 			<button type="button" class="btn btn-sm btn-primary" @click="openDialog">Open dialog</button>
 			<p class="text-xs font-mono text-base-content/50" v-text="result"></p>
 

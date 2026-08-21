@@ -7,6 +7,6 @@
  */
 export const APP_TITLE = 'Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5';
 
-/** Only used by the demo home page - safe to delete along with src/views/HomeView.vue. */
+/** DEMO_HOSTNAME is only used by the demo home page. GITHUB_REPO is also used by TheFooter.vue. */
 export const DEMO_HOSTNAME = 'tpl-vue3-tailwind4-daisyui5.brown.sk';
 export const GITHUB_REPO = 'https://github.com/martinille/starter-template-vite-vue3-sass-tailwind4-daisyui5';

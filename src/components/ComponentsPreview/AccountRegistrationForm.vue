@@ -38,7 +38,7 @@
 							clip-rule="evenodd"
 						></path>
 					</svg>
-					<input type="password" class="grow" placeholder="password">
+					<input type="password" class="grow" placeholder="Password">
 				</label>
 				<span class="text-[0.6875rem] px-1 flex gap-2 items-center text-base-content/60">
 					<span class="status inline-block status-error"></span>
@@ -46,14 +46,14 @@
 				</span>
 			</div>
 			<label class="flex gap-2 items-center text-xs text-base-content/60">
-				<input type="checkbox" class="toggle toggle-xs"> Accept terms without reading
+				<input type="checkbox" class="toggle toggle-xs"> I accept the terms and conditions
 			</label>
 			<label class="flex gap-2 items-center text-xs text-base-content/60">
-				<input type="checkbox" class="toggle toggle-xs"> Subscribe to spam emails
+				<input type="checkbox" class="toggle toggle-xs"> Send me product updates by email
 			</label>
 			<div class="card-actions items-center gap-6">
 				<button class="btn btn-primary">Register</button>
-				<button class="link">Or login</button>
+				<button class="link">Or log in</button>
 			</div>
 		</div>
 	</div>

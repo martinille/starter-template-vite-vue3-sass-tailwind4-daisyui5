@@ -1,9 +1,9 @@
 /**
  * ESLint configuration ("yarn lint", "yarn lint:fix").
  *
- * Flat config format. The `rules` block only turns off the opinionated
- * formatting rules that fight with this template's style (tabs, attributes on
- * one line) - drop or extend it to taste.
+ * Flat config format. The `rules` block turns off the formatting rules that fight
+ * with this template's style (tabs, attributes on one line) and turns on a few
+ * correctness rules - drop or extend it to taste.
  *
  * Docs: https://eslint.org/docs/latest/use/configure/
  *       https://eslint.vuejs.org/

@@ -37,7 +37,7 @@ const items = [
 
 <template>
 	<div class="py-6">
-		<h2>Packages included:</h2>
+		<h2>Included packages</h2>
 
 		<div class="flex flex-wrap gap-4 items-center justify-center">
 			<div v-for="item in items" :key="item.title" class="flex flex-row flex-grow gap-2 p-4 bg-base-100 items-center h-full rounded-box ring-1 ring-base-content/10 text-left max-w-60">

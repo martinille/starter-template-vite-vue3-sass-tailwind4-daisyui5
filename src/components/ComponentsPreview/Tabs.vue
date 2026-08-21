@@ -5,17 +5,17 @@
 <template>
 	<div class="w-full">
 		<div role="tablist" class="tabs tabs-lift">
-			<input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 1">
+			<input type="radio" name="product-tabs" role="tab" class="tab" aria-label="Overview" checked="checked">
 			<div class="tab-content bg-base-100 border-base-300 p-6">
-				Tab content 1
+				A lightweight starter kit with routing, theming and a preview gallery already wired up.
 			</div>
-			<input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 2" checked="checked">
+			<input type="radio" name="product-tabs" role="tab" class="tab" aria-label="Specification">
 			<div class="tab-content bg-base-100 border-base-300 p-6">
-				Tab content 2
+				Built on Vue 3, Vite, Sass, Tailwind CSS 4 and DaisyUI 5, with no runtime dependencies beyond Vue.
 			</div>
-			<input type="radio" name="my_tabs_2" role="tab" class="tab" aria-label="Tab 3">
+			<input type="radio" name="product-tabs" role="tab" class="tab" aria-label="Support">
 			<div class="tab-content bg-base-100 border-base-300 p-6">
-				Tab content 3
+				Questions and bug reports are handled through the issue tracker in the project repository.
 			</div>
 		</div>
 	</div>

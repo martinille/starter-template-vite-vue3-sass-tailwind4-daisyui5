@@ -1,22 +1,27 @@
 <script setup>
+import { computed, ref } from 'vue'
 
+const billing = ref('yearly')
+
+const price = computed(() => (billing.value === 'yearly' ? '$2,000' : '$200'))
+const period = computed(() => (billing.value === 'yearly' ? 'year' : 'month'))
 </script>
 
 <template>
 	<div class="card card-border border-base-300 bg-base-100 w-full max-w-70">
 		<div class="flex justify-center">
-			<div class="tabs tabs-box inline-flex flex-nowrap m-4 bg-base-300">
-				<input type="radio" name="my_tabs_1" role="tab" class="tab w-1/2" aria-label="Monthly">
-				<div class="w-1/2 indicator">
-					<div class="indicator-item badge badge-warning badge-xs">SALE</div>
-					<input type="radio" name="my_tabs_1" role="tab" class="tab w-full" aria-label="Yearly" checked="">
+			<div class="indicator m-4">
+				<div class="indicator-item badge badge-warning badge-xs">SALE</div>
+				<div class="tabs tabs-box flex-nowrap bg-base-300">
+					<input v-model="billing" type="radio" name="subscription_billing" value="monthly" role="tab" class="tab" aria-label="Monthly">
+					<input v-model="billing" type="radio" name="subscription_billing" value="yearly" role="tab" class="tab" aria-label="Yearly">
 				</div>
 			</div>
 		</div>
 		<div class="card-body gap-4 pt-2">
 			<div class="flex flex-col">
-				<h4 class="tracking-wide opacity-50 font-bold">Starter Plan</h4>
-				<div><span class="text-4xl font-black">$200</span><span class="opacity-50">/month</span></div>
+				<h4 class="tracking-wide opacity-50 font-bold">Starter plan</h4>
+				<div><span class="text-4xl font-black">{{ price }}</span><span class="opacity-50">/{{ period }}</span></div>
 			</div>
 			<div class="flex flex-col text-xs my-2">
 				<div class="flex gap-2 items-center border-b border-b-accent/5 pb-2">
@@ -27,7 +32,7 @@
 							clip-rule="evenodd"
 						></path>
 					</svg>
-					20 Tokens per day
+					20 tokens per day
 				</div>
 				<div class="flex gap-2 items-center border-b border-b-accent/5 pb-2">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 text-success">
@@ -37,7 +42,7 @@
 							clip-rule="evenodd"
 						></path>
 					</svg>
-					10 Projects
+					10 projects
 				</div>
 				<div class="flex gap-2 items-center border-b border-b-accent/5 pb-2">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 text-success">
@@ -47,7 +52,7 @@
 							clip-rule="evenodd"
 						></path>
 					</svg>
-					API Access
+					API access
 				</div>
 				<div class="flex gap-2 items-center">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 text-error">
@@ -57,10 +62,10 @@
 							clip-rule="evenodd"
 						></path>
 					</svg>
-					Priority Support
+					Priority support
 				</div>
 			</div>
-			<button class="btn btn-primary">Buy Now</button>
+			<button type="button" class="btn btn-primary">Buy now</button>
 		</div>
 	</div>
 </template>

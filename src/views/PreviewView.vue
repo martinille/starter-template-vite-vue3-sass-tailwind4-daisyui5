@@ -20,10 +20,10 @@ import Accordion from '@/components/ComponentsPreview/Accordion.vue';
 import AdminPanelNav from '@/components/ComponentsPreview/AdminPanelNav.vue';
 import Pagination from '@/components/ComponentsPreview/Pagination.vue';
 import Tabs from '@/components/ComponentsPreview/Tabs.vue';
+import Alerts from '@/components/ComponentsPreview/Alerts.vue';
 import EmptyState from '@/components/ComponentsPreview/EmptyState.vue';
 import ModalDialog from '@/components/ComponentsPreview/ModalDialog.vue';
 import Notifications from '@/components/ComponentsPreview/Notifications.vue';
-import Toasts from '@/components/ComponentsPreview/Toasts.vue';
 import ProductCard from '@/components/ComponentsPreview/ProductCard.vue';
 import SubscriptionPlanCard from '@/components/ComponentsPreview/SubscriptionPlanCard.vue';
 import Avatars from '@/components/ComponentsPreview/Avatars.vue';
@@ -50,10 +50,10 @@ const components = [
 	{ title: 'Admin Panel Nav', category: 'Navigation', component: AdminPanelNav },
 	{ title: 'Pagination', category: 'Navigation', component: Pagination },
 	{ title: 'Tabs', category: 'Navigation', component: Tabs },
+	{ title: 'Alerts', category: 'Feedback', component: Alerts },
 	{ title: 'Empty State', category: 'Feedback', component: EmptyState },
 	{ title: 'Modal Dialog', category: 'Feedback', component: ModalDialog },
 	{ title: 'Notifications', category: 'Feedback', component: Notifications },
-	{ title: 'Toasts', category: 'Feedback', component: Toasts },
 	{ title: 'Product Card', category: 'Commerce', component: ProductCard },
 	{ title: 'Subscription Plan Card', category: 'Commerce', component: SubscriptionPlanCard },
 	{ title: 'Avatars', category: 'Social & media', component: Avatars },
@@ -106,7 +106,7 @@ const reset = () => {
 	<div class="container-center">
 		<h1 class="text-center">Components Preview</h1>
 		<p class="text-center text-base text-base-content/70">Components built with DaisyUI and Tailwind CSS. Search or filter by category.</p>
-		<p class="text-center text-base text-base-content/70 mb-8">You can find the source code in the <code><span class="icon">📁</span>src/components/ComponentsPreview</code> directory.</p>
+		<p class="text-center text-base text-base-content/70 mb-8">You can find the source code in the <code>📁 src/components/ComponentsPreview</code> directory.</p>
 
 		<div class="flex flex-col gap-4 items-center mb-4">
 			<label class="input input-bordered w-full max-w-md">

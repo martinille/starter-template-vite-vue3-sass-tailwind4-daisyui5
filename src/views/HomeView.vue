@@ -17,14 +17,14 @@ const githubRepo = GITHUB_REPO;
 		<h1 class="mb-8">🚀 {{ title }}</h1>
 		<div class="text-base-content/70 mb-10">
 			<p>Welcome! This starter template is designed to provide a pre-configured setup. It allows you to start by editing Vue components using Tailwind CSS and DaisyUI for styling.</p>
-			<p>Vite, Vue 3, Sass, Tailwind CSS 4, and DaisyUI 5 included. <b>Vue Router is also included and configured</b>, you could try navigating to another page or to <router-link :to="{ path: '/non-existing/route' }" class="link">a page that does not exist</router-link>.</p>
+			<p>Vite, Vue 3, Sass, Tailwind CSS 4, and DaisyUI 5 included. <b>Vue Router is also included and configured</b>, you can try navigating to another page or to <router-link :to="{ path: '/non-existing/route' }" class="link">a page that does not exist</router-link>.</p>
 		</div>
 	</div>
 
 	<!-- Banner -->
 	<div class="mb-10 text-center">
 		<div v-if="currentHostname !== demoHostname" class="badge-soft badge badge-lg h-auto p-1 mb-4">
-			🌐 Check out live demo: <a :href="`https://${ demoHostname }`" class="link">https://{{ demoHostname }}</a>
+			🌐 Check out the live demo: <a :href="`https://${ demoHostname }`" class="link">https://{{ demoHostname }}</a>
 		</div>
 		<br>
 		<div class="badge-soft badge badge-lg h-auto p-1 mb-4">

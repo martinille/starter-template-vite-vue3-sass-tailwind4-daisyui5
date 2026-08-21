@@ -5,7 +5,8 @@ import { availableThemes, currentTheme, setTheme } from '@/utils/theme.js';
 
 <template>
 	<div class="mb-8">
-		<h2>Theme management implemented. You can change the theme:</h2>
+		<h2>Themes</h2>
+		<p class="text-base-content/70 mb-4">Theme switching is already wired up. Pick one to see it applied.</p>
 		<div class="flex flex-wrap gap-2 items-center justify-center">
 			<label
 				v-for="theme in availableThemes"

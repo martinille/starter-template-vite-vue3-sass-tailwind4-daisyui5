@@ -6,11 +6,11 @@ import productImage from '@/assets/images/product-placeholder.svg';
 	<div class="w-full max-w-80">
 		<div class="card card-border border-base-300 w-full bg-base-100 card-sm">
 			<figure class="p-2">
-				<img class="rounded-[calc(var(--radius-box)-.5rem)] w-full" :src="productImage" alt="Shoes">
+				<img class="rounded-[calc(var(--radius-box)-.5rem)] w-full" :src="productImage" alt="Product placeholder image">
 			</figure>
 			<div class="card-body gap-4">
 				<h2 class="flex justify-between items-center">
-					<span class="font-semibold">Nike Shoes</span>
+					<span class="font-semibold">Everyday Trainers</span>
 					<span class="badge badge-success badge-sm">SALE</span>
 				</h2>
 				<div class="flex gap-2 items-center">
@@ -23,7 +23,7 @@ import productImage from '@/assets/images/product-placeholder.svg';
 					</div>
 					<span class="text-xs opacity-60">420 reviews</span>
 				</div>
-				<div>
+				<div class="flex items-baseline gap-2">
 					<span class="text-2xl font-semibold">$120</span>
 					<span class="text-sm opacity-60 line-through">$150</span>
 				</div>

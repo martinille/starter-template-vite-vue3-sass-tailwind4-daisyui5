@@ -42,7 +42,7 @@ describe('views', () => {
 		const view = wrapper.find('main').element.firstElementChild;
 		expect(view).not.toBeNull();
 		expect(view.className).not.toContain('opacity-0');
-		expect(wrapper.text()).toContain('Packages included');
+		expect(wrapper.text()).toContain('Included packages');
 	});
 
 	it('renders the 404 view with the path that was not found', async () => {

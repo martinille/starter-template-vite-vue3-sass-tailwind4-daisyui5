@@ -9,11 +9,11 @@ const columns = [
 ];
 
 const orders = [
-	{ id: "#1042", customer: "C. Chapman", status: "Done", badge: "badge-success", amount: 249 },
+	{ id: "#1042", customer: "C. Chapman", status: "Completed", badge: "badge-success", amount: 249 },
 	{ id: "#1043", customer: "H. Hudson", status: "Failed", badge: "badge-error", amount: 78 },
-	{ id: "#1044", customer: "F. Fisher", status: "Active", badge: "badge-warning", amount: 1320 },
+	{ id: "#1044", customer: "F. Fisher", status: "In progress", badge: "badge-warning", amount: 1320 },
 	{ id: "#1045", customer: "N. Nelson", status: "Sent", badge: "badge-info", amount: 512 },
-	{ id: "#1046", customer: "A. Anderson", status: "Done", badge: "badge-success", amount: 96 },
+	{ id: "#1046", customer: "A. Anderson", status: "Completed", badge: "badge-success", amount: 96 },
 ];
 
 const sortKey = ref("id");

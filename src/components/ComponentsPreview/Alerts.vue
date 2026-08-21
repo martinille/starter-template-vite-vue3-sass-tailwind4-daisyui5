@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const initialToasts = [
+const initialAlerts = [
 	{
 		id: 1,
 		style: 'alert-info',
@@ -22,29 +22,29 @@ const initialToasts = [
 	},
 ]
 
-const toasts = ref([...initialToasts])
+const alerts = ref([...initialAlerts])
 
 function dismiss(id) {
-	toasts.value = toasts.value.filter((toast) => toast.id !== id)
+	alerts.value = alerts.value.filter((alert) => alert.id !== id)
 }
 
 function reset() {
-	toasts.value = [...initialToasts]
+	alerts.value = [...initialAlerts]
 }
 </script>
 
 <template>
 	<div class="card card-sm card-border border-base-300 bg-base-100 w-full max-w-80">
 		<div class="card-body gap-4">
-			<h2 class="font-semibold">Messages</h2>
+			<h2 class="font-semibold">Alerts</h2>
 
-			<div v-if="toasts.length" class="flex flex-col gap-2">
-				<div v-for="toast in toasts" :key="toast.id" class="alert alert-soft text-xs font-bold" :class="toast.style">
+			<div v-if="alerts.length" class="flex flex-col gap-2">
+				<div v-for="alert in alerts" :key="alert.id" class="alert alert-soft grid-cols-[auto_1fr_auto] items-start gap-2 text-xs font-bold" :class="alert.style">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 shrink-0">
-						<path stroke-linecap="round" stroke-linejoin="round" :d="toast.path"></path>
+						<path stroke-linecap="round" stroke-linejoin="round" :d="alert.path"></path>
 					</svg>
-					<span v-text="toast.text"></span>
-					<button type="button" class="btn btn-xs btn-circle btn-ghost" :aria-label="`Dismiss: ${toast.text}`" @click="dismiss(toast.id)">
+					<span class="whitespace-normal leading-snug" v-text="alert.text"></span>
+					<button type="button" class="btn btn-xs btn-circle btn-ghost" :aria-label="`Dismiss: ${alert.text}`" @click="dismiss(alert.id)">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-3">
 							<path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z"></path>
 						</svg>
@@ -54,8 +54,8 @@ function reset() {
 
 			<div v-else class="flex flex-col items-center gap-2 py-6 text-center">
 				<span class="text-3xl">🎉</span>
-				<p class="text-sm font-semibold">Inbox zero</p>
-				<p class="text-xs text-base-content/60">You have read everything. Nice work.</p>
+				<p class="text-sm font-semibold">All alerts dismissed</p>
+				<p class="text-xs text-base-content/60">Nothing needs your attention right now.</p>
 			</div>
 
 			<button type="button" class="btn btn-sm btn-outline btn-block" @click="reset">Reset</button>

@@ -15,7 +15,7 @@
 			</h2>
 			<div class="flex flex-col text-xs">
 				<div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
-					Charlie Chapman <span class="badge badge-xs badge-info">Send</span>
+					Charlie Chapman <span class="badge badge-xs badge-success">Completed</span>
 				</div>
 				<div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
 					Howard Hudson <span class="badge badge-xs badge-error">Failed</span>
@@ -24,7 +24,7 @@
 					Fiona Fisher <span class="badge badge-xs badge-warning">In progress</span>
 				</div>
 				<div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
-					Nick Nelson <span class="badge badge-xs badge-success">Completed</span>
+					Nick Nelson <span class="badge badge-xs badge-info">Sent</span>
 				</div>
 				<div class="flex justify-between items-center gap-2 border-t border-dashed border-t-base-content/5 py-2">
 					Amanda Anderson <span class="badge badge-xs badge-success">Completed</span>

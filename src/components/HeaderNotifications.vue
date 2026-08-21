@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
 
 const notifications = ref([
 	{ id: 1, title: 'Build finished', detail: 'Production build succeeded in 42s.', time: '2m', read: false },
-	{ id: 2, title: 'New comment', detail: 'Anakin replied to your pull request.', time: '1h', read: false },
+	{ id: 2, title: 'New comment', detail: 'Someone replied to your pull request.', time: '1h', read: false },
 	{ id: 3, title: 'Weekly report', detail: 'Your traffic grew by 12% this week.', time: '2d', read: true },
 ]);
 

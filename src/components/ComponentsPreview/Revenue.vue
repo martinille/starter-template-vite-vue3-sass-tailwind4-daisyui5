@@ -7,8 +7,8 @@
 		<div class="card w-full card-border border-base-300 bg-base-100">
 			<div class="stats">
 				<div class="stat">
-					<div class="stat-title">Current Month Revenue</div>
-					<div class="stat-value">$32,400</div>
+					<div class="stat-title">Current month revenue</div>
+					<div class="stat-value">$48,900</div>
 					<div class="stat-desc flex gap-2 items-center">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 text-success">
 							<path
@@ -17,7 +17,7 @@
 								clip-rule="evenodd"
 							></path>
 						</svg>
-						21% more than last month
+						8% more than last month
 					</div>
 				</div>
 			</div>

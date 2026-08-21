@@ -24,11 +24,11 @@
 				<div style="height: 90%"></div>
 			</div>
 			<p class="text-xs py-3">
-				Sales volume reached $12,450 this week, showing a 15% increase from the previous period.
+				Sales volume reached $12,450 this week, after a steady climb over the last sixteen weeks.
 			</p>
 			<div class="grid grid-cols-2 gap-2">
-				<button class="btn">Charts</button>
-				<button class="btn btn-neutral">Details</button>
+				<button type="button" class="btn">Export</button>
+				<button type="button" class="btn btn-neutral">Details</button>
 			</div>
 		</div>
 	</div>

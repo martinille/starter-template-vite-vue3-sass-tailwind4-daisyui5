@@ -3,14 +3,13 @@
 </script>
 
 <template>
-	<!--	<div class="w-full max-w-60">-->
 	<div class="card w-full max-w-60 card-border border-base-300">
 		<div class="stats overflow-hidden bg-base-100 w-full shadow-[0_.1rem_.5rem_-.3rem_#0003]">
 			<div class="stat">
 				<div class="stat-figure">
 					<div class="radial-progress" style="--value:91;--size:3rem;" role="progressbar">91</div>
 				</div>
-				<div class="stat-title">Page Score</div>
+				<div class="stat-title">Page score</div>
 				<div class="stat-value">91<span class="text-sm">/100</span></div>
 				<div class="stat-desc flex gap-1 items-center">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 text-success">
@@ -25,7 +24,6 @@
 			</div>
 		</div>
 	</div>
-<!--	</div>-->
 </template>
 
 <style scoped lang="scss">

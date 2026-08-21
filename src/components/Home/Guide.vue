@@ -6,7 +6,7 @@ const projectName = ref("");
 </script>
 
 <template>
-	<h2 class="text-center">Getting Started</h2>
+	<h2 class="text-center">Getting started</h2>
 
 	<div class="container max-w-6xl mx-auto mb-10">
 		<div class="flex flex-col flex-wrap items-start justify-center gap-4 w-full mb-10 md:flex-row">
@@ -75,10 +75,10 @@ const projectName = ref("");
 					📌 Open your browser and go to <code>http://localhost:5173</code>.
 				</p>
 				<div class="mb-2 text-base-content/70">
-					<span class="font-semibold">📌 You can start from scratch by removing all directories in <code>src/</code> except the following:</span>
+					<span class="font-semibold">📌 You can start from scratch by removing everything in <code>src/</code> except:</span>
 					<ul class="[&_li]:my-1.5">
 						<li><code>📄src/assets/styles/*</code></li>
-						<li><code>📄src/App.vue</code> <span class="text-base-content/70 text-sm">&larr; here you can start with editing then</span></li>
+						<li><code>📄src/App.vue</code> <span class="text-base-content/70 text-sm">&larr; start editing here</span></li>
 						<li><code>📄src/main.js</code></li>
 					</ul>
 				</div>
@@ -96,7 +96,7 @@ const projectName = ref("");
 					<div class="input">http://localhost:5173</div>
 				</div>
 				<div class="grid place-content-center items-center border-t border-base-300 h-60 gap-4 p-8 bg-white/10">
-					<div class="">🚀 Starter template: Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5</div>
+					<div class="">🚀 Vite + Vue 3 + Sass + Tailwind 4 + DaisyUI 5</div>
 					<div class="skeleton h-4 w-32 mx-auto"></div>
 					<div class="skeleton h-4 w-40 mx-auto"></div>
 					<div class="flex gap-2">

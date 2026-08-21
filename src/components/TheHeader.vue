@@ -4,7 +4,7 @@ import HeaderNotifications from '@/components/HeaderNotifications.vue';
 import HeaderSearch from '@/components/HeaderSearch.vue';
 import Breadcrumbs from '@/components/Breadcrumbs.vue';
 
-const title = 'Template Preview';
+const title = 'Vue 3 Starter Template';
 const pages = [
 	{ name: 'home', label: 'Home' },
 	{ name: 'componentsPreview', label: 'Components Preview' },

@@ -17,7 +17,7 @@ const year = new Date().getFullYear();
 			<nav>
 				<h6 class="footer-title">Pages</h6>
 				<RouterLink :to="{ name: 'home' }" class="link link-hover">Home</RouterLink>
-				<RouterLink :to="{ name: 'componentsPreview' }" class="link link-hover">Components preview</RouterLink>
+				<RouterLink :to="{ name: 'componentsPreview' }" class="link link-hover">Components Preview</RouterLink>
 			</nav>
 			<nav>
 				<h6 class="footer-title">Documentation</h6>
