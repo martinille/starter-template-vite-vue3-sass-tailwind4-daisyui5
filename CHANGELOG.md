@@ -53,6 +53,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Breadcrumbs on the 404 page linked to the route pattern instead of the actual path.
 - The header navigation is now reachable on small screens.
 - Preview images are served from the project instead of a third-party CDN.
+- The workflows enable Corepack before `actions/setup-node`, which otherwise probes
+  the Yarn cache with the runner's Yarn 1 and fails on the `packageManager` field.
 
 ### Removed
 
