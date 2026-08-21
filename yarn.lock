@@ -1279,6 +1279,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"aria-query@npm:^5.3.0":
+  version: 5.3.2
+  resolution: "aria-query@npm:5.3.2"
+  checksum: 10c0/003c7e3e2cff5540bf7a7893775fc614de82b0c5dde8ae823d47b7a28a9d4da1f7ed85f340bdb93d5649caa927755f0e31ecc7ab63edfdfc00c8ef07e505e03e
+  languageName: node
+  linkType: hard
+
 "assertion-error@npm:^2.0.1":
   version: 2.0.1
   resolution: "assertion-error@npm:2.0.1"
@@ -1645,6 +1652,19 @@ __metadata:
     "@typescript-eslint/parser":
       optional: true
   checksum: 10c0/d863fa667f1126d867209615d8337e74272d3406bd2ab8e34b383529b1dff4971530b2464ec0af56bd4d41af99097cb3f5fd38627f38f366566fb92a1a896adb
+  languageName: node
+  linkType: hard
+
+"eslint-plugin-vuejs-accessibility@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "eslint-plugin-vuejs-accessibility@npm:2.6.0"
+  dependencies:
+    aria-query: "npm:^5.3.0"
+    vue-eslint-parser: "npm:^9.0.0 || ^10.0.0"
+  peerDependencies:
+    eslint: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0
+    globals: ">= 13.12.1"
+  checksum: 10c0/15735e60ae2990e49d9c27a3e60b7852123f53f832351c32377dc3acd068873c878a67ffd03549f3d2974196c70a60740bff9c7f5fed87b1a707bb35230385fd
   languageName: node
   linkType: hard
 
@@ -3237,6 +3257,7 @@ __metadata:
     daisyui: "npm:^5.7.17"
     eslint: "npm:^10.8.1"
     eslint-plugin-vue: "npm:^10.10.0"
+    eslint-plugin-vuejs-accessibility: "npm:^2.6.0"
     globals: "npm:^17.11.0"
     jsdom: "npm:^30.0.1"
     sass-embedded: "npm:^1.102.0"
@@ -3666,7 +3687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-eslint-parser@npm:^10.4.1":
+"vue-eslint-parser@npm:^10.4.1, vue-eslint-parser@npm:^9.0.0 || ^10.0.0":
   version: 10.4.1
   resolution: "vue-eslint-parser@npm:10.4.1"
   dependencies:

@@ -17,7 +17,7 @@ const priceRange = ref(50);
 				</span>
 			</h2>
 			<div class="text-3xl font-extralight text-center" v-text="priceRange"></div>
-			<input v-model="priceRange" type="range" class="range range-sm w-full" min="0" max="100" step="25" />
+			<input v-model="priceRange" type="range" class="range range-sm w-full" min="0" max="100" step="25" aria-label="Price range" />
 			<div class="flex justify-between px-2.5 mt-2 text-xs">
 				<span>|</span>
 				<span>|</span>

@@ -10,12 +10,14 @@
  */
 import js from '@eslint/js';
 import pluginVue from 'eslint-plugin-vue';
+import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
 import globals from 'globals';
 
 export default [
 	{ ignores: ['dist/**', 'coverage/**', 'node_modules/**'] },
 	js.configs.recommended,
 	...pluginVue.configs['flat/recommended'],
+	...pluginVueA11y.configs['flat/recommended'],
 	{
 		files: ['**/*.{js,vue}'],
 		languageOptions: {
@@ -33,6 +35,10 @@ export default [
 			'vue/singleline-html-element-content-newline': 'off',
 			'vue/html-indent': ['warn', 'tab'],
 			'vue/html-self-closing': 'off',
+			'vuejs-accessibility/label-has-for': [
+				'error',
+				{ required: { some: ['nesting', 'id'] } },
+			],
 		},
 	},
 ];

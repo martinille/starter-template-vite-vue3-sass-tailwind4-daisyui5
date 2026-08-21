@@ -10,7 +10,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - ✅ [Tailwind CSS 4](https://tailwindcss.com/) for styling
 - ✅ [DaisyUI 5](https://daisyui.com/) for additional Tailwind CSS components
 - ✅ [Vitest](https://vitest.dev/) + [Vue Test Utils](https://test-utils.vuejs.org/) for unit tests
-- ✅ [ESLint](https://eslint.org/) for linting
+- ✅ [ESLint](https://eslint.org/) for linting, with accessibility rules
 - ✅ [Yarn 4](https://yarnpkg.com/) via Corepack, with a 7-day minimum dependency age
 - ✅ **Theme configuration** (light, dark, system, ...)
 - ✅ **UI blocks (components)** pre-configured with DaisyUI
@@ -61,6 +61,12 @@ yarn install
 | `yarn test:coverage` | Run the unit tests with a coverage report   |
 | `yarn lint`          | Lint the project                            |
 | `yarn lint:fix`      | Lint the project and apply the fixes        |
+
+### Dependency updates
+`renovate.json` configures [Renovate](https://docs.renovatebot.com/) with the same 7-day
+`minimumReleaseAge` as the install gate, so update pull requests never propose a version
+Yarn would refuse to install. It only runs once you install the Renovate GitHub App on
+the repository - delete the file if you prefer Dependabot or manual updates.
 
 ### Dependency safety
 `.yarnrc.yml` sets `npmMinimalAgeGate: 10080`, so Yarn refuses to install any package

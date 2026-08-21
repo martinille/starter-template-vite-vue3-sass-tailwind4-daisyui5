@@ -51,7 +51,7 @@ const playing = ref(false)
 		<div class="flex flex-col px-6 py-4 border-t border-base-300">
 			<div class="relative mt-6">
 				<div class="absolute tooltip top-2 tooltip-open before:text-xs" style="inset-inline-start:27%" data-tip="24:58"></div>
-				<progress class="progress" value="27" max="100"></progress>
+				<progress class="progress" value="27" max="100" aria-label="Playback progress"></progress>
 			</div>
 			<div class="flex text-xs opacity-50 justify-between">
 				<span>0:00</span>

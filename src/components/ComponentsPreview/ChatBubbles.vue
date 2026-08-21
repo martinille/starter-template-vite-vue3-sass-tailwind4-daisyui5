@@ -1,5 +1,6 @@
 <script setup>
-
+import avatar1 from '@/assets/images/avatars/avatar-1.svg';
+import avatar2 from '@/assets/images/avatars/avatar-2.svg';
 </script>
 
 <template>
@@ -9,8 +10,8 @@
 				<div class="chat-image avatar">
 					<div class="w-8 rounded-full">
 						<img
-							alt="Tailwind CSS chat bubble component"
-							src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+							alt=""
+							:src="avatar1"
 						/>
 					</div>
 				</div>
@@ -27,8 +28,8 @@
 				<div class="chat-image avatar">
 					<div class="w-8 rounded-full">
 						<img
-							alt="Tailwind CSS chat bubble component"
-							src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+							alt=""
+							:src="avatar1"
 						/>
 					</div>
 				</div>
@@ -46,8 +47,8 @@
 				<div class="chat-image avatar">
 					<div class="w-8 rounded-full">
 						<img
-							alt="Tailwind CSS chat bubble component"
-							src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+							alt=""
+							:src="avatar2"
 						/>
 					</div>
 				</div>

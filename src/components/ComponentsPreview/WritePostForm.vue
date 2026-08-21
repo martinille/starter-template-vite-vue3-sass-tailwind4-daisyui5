@@ -28,7 +28,7 @@
 				</div>
 				<button class="btn btn-xs">Add files</button>
 			</div>
-			<textarea class="textarea textarea-border w-full max-w-none resize-none" placeholder="What's happening?"></textarea>
+			<textarea class="textarea textarea-border w-full max-w-none resize-none" placeholder="What's happening?" aria-label="Post content"></textarea>
 			<p class="px-2 opacity-40 text-xs">1200 characters remaining</p>
 			<div class="card-actions grid grid-cols-2">
 				<button class="btn">Draft</button>
