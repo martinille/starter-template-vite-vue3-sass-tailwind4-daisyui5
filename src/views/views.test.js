@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { mount } from '@vue/test-utils';
+import { flushPromises, mount } from '@vue/test-utils';
 import { createRouter, createMemoryHistory } from 'vue-router';
 import routes from '@/router/routes.js';
 import App from '@/App.vue';
@@ -27,6 +27,22 @@ describe('views', () => {
 		expect(skipLink.exists()).toBe(true);
 		expect(skipLink.classes()).toContain('sr-only');
 		expect(wrapper.find('main').attributes('id')).toBe('main');
+	});
+
+	it('swaps the routed view on navigation without leaving it hidden', async () => {
+		const router = createRouter({ history: createMemoryHistory(), routes });
+		router.push('/preview');
+		await router.isReady();
+		const wrapper = mount(App, { global: { plugins: [router] } });
+		expect(wrapper.text()).toContain('Components Preview');
+
+		await router.push('/');
+		await flushPromises();
+
+		const view = wrapper.find('main').element.firstElementChild;
+		expect(view).not.toBeNull();
+		expect(view.className).not.toContain('opacity-0');
+		expect(wrapper.text()).toContain('Packages included');
 	});
 
 	it('renders the 404 view with the path that was not found', async () => {

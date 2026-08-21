@@ -19,28 +19,28 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<div class="card card-border border-base-300 w-full max-w-80 p-6 bg-base-100">
-		<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+	<div class="card card-border border-base-300 w-full max-w-80 p-4 bg-base-100">
+		<div class="flex flex-wrap justify-center gap-x-4 gap-y-2 text-center">
 			<div class="flex flex-col">
-				<span class="font-mono text-5xl countdown">
+				<span class="font-mono text-4xl countdown">
 					<span style="--value: 14">14</span>
 				</span>
 				days
 			</div>
 			<div class="flex flex-col">
-				<span class="font-mono text-5xl countdown">
+				<span class="font-mono text-4xl countdown">
 					<span style="--value: 10">10</span>
 				</span>
 				hours
 			</div>
 			<div class="flex flex-col">
-				<span class="font-mono text-5xl countdown">
+				<span class="font-mono text-4xl countdown">
 					<span style="--value: 24">24</span>
 				</span>
 				min
 			</div>
 			<div class="flex flex-col">
-				<span class="font-mono text-5xl countdown">
+				<span class="font-mono text-4xl countdown">
 					<span :style="{ '--value': counter }">{{ counter }}</span>
 				</span>
 				sec
