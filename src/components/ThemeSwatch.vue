@@ -24,3 +24,7 @@ defineProps({
 	<!-- eslint-disable-next-line vue/no-v-html -->
 	<span v-else-if="theme.icon" class="shrink-0" aria-hidden="true" v-html="theme.icon"></span>
 </template>
+
+<style scoped lang="scss">
+/* Add your SCSS code here. Project-wide styles live in src/assets/styles/main.scss. */
+</style>

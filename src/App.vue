@@ -22,5 +22,5 @@ import TheHeader from '@/components/TheHeader.vue';
 </template>
 
 <style scoped lang="scss">
-/* Component-scoped Sass goes here. Project-wide styles live in src/assets/styles/main.scss. */
+/* Add your SCSS code here. Project-wide styles live in src/assets/styles/main.scss. */
 </style>

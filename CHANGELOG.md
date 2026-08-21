@@ -57,4 +57,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - `src/data/themes.js`, an unused duplicate of the theme list.
-- Empty `<style scoped lang="scss">` blocks from 32 components.

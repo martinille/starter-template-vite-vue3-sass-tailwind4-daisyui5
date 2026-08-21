@@ -119,6 +119,9 @@ work together with Sass. The Tailwind and DaisyUI configuration lives in CSS:
 - `src/assets/styles/vendor/daisyui.css` - enabled DaisyUI themes and theme overrides
 - `src/assets/styles/main.scss` - entry point, project-wide styles
 
+Every component ships with an empty `<style scoped lang="scss">` block, ready for
+component-scoped Sass. Delete the block if a component does not need one.
+
 ### Theming
 `src/utils/theme.js` is the single source of truth for the available themes. It stores the
 selection in `localStorage`, applies it to `<html data-theme="...">` and, when `system` is

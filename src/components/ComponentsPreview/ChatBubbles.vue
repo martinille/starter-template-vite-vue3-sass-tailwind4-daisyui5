@@ -83,3 +83,7 @@ import avatar2 from '@/assets/images/avatars/avatar-2.svg';
 		</div>
 	</div>
 </template>
+
+<style scoped lang="scss">
+/* Add your SCSS code here. Project-wide styles live in src/assets/styles/main.scss. */
+</style>
