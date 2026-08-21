@@ -1,19 +1,25 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-
-// https://vite.dev/config/
-export default defineConfig(({mode}) => ({
-        base: process.env.BASE_URL,
-	plugins: [vue(), tailwindcss()],
+export default defineConfig(({ mode }) => ({
+	base: process.env.BASE_URL || '/',
+	plugins: [vue()],
 	css: {
-		devSourcemap: mode === "development",
+		devSourcemap: mode === 'development',
 	},
 	resolve: {
 		alias: {
-			'@': fileURLToPath(new URL('./src', import.meta.url))
-		}
+			'@': fileURLToPath(new URL('./src', import.meta.url)),
+		},
 	},
-}))
+	test: {
+		environment: 'jsdom',
+		globals: true,
+		setupFiles: ['src/test/setup.js'],
+		include: ['src/**/*.test.js'],
+		coverage: {
+			include: ['src/**/*.{js,vue}'],
+		},
+	},
+}));
